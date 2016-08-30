@@ -50,18 +50,26 @@
 	const Vue = __webpack_require__(2);
 
 	const {remote} = electron;
-	const fileUtil = remote.require('./lib/fileUtil');
+	const htmlUtil = remote.require('./lib/htmlUtil');
 
 	let data = {
 	  fileList: [],
 	  fileText: null,
+	  kickerUrl: 'http://www.kicker.de/news/fussball/bundesliga/spieltag/1-bundesliga/2016-17/1/3317245/taktische-austellung_bayern-muenchen-14_werder-bremen-4.html',
 	  kickerHtml: null
 	};
 
-	const main = new Vue({
-	  el: '#main',
+	const body = new Vue({
+	  el: '#body',
 	  data: data,
 	  methods: {
+	    fetch: function() {
+	      if (data.kickerUrl) {
+	        htmlUtil.fetchFormation(data.kickerUrl, function(html) {
+	          data.kickerHtml = html;
+	        });
+	      }
+	    }
 	  },
 	  filters: {
 	  },

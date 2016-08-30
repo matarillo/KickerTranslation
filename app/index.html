@@ -41,11 +41,11 @@
   }
 </style>
 </head>
-<body>
+<body id="body">
 
 <div id="top">
-  <div class="center"><div>URL: </div><input type="text" id="topUrl" /></div>
-  <div class="right"><input type="button" id="topButton" value="Get" /></div>
+  <div class="center"><div>URL: </div><input type="text" id="topUrl" v-model="kickerUrl" /></div>
+  <div class="right"><input type="button" id="topButton" value="Fetch" v-on:click="fetch" /></div>
 </div>
 
 <div id="main">
@@ -56,13 +56,7 @@
     aa<br />
     aa<br />
   </div>
-  <div class="center">
-    aa<br />
-    aa<br />
-    aa<br />
-    aa<br />
-    aa<br />
-  </div>
+  <div class="center" v-html="kickerHtml"></div>
 </div>
 
 <script src="bundle.js"></script>
