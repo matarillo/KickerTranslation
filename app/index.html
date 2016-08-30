@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Kicker Translation</title>
+<style type="text/css">
+  #top {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  #top>.center {
+    flex: 1;
+    display: flex;
+  }
+  #top>.center>div {
+    width: 48px;
+  }
+  #top>.center>input {
+    flex: 1;
+  }
+  #top>.right {
+    width: 72px;
+    margin-left: 10px;
+  }
+  #top>.right>input {
+    width: 100%;
+  }
+  #main {
+    display:flex;
+  }
+  #main>.left {
+    width: 260px;
+    border: 1px solid #4C3C1B;
+    padding: 5px;
+    margin-right: 10px;
+  }
+  #main>.center {
+    flex: 1;
+    border: 1px solid #4C3C1B;
+    padding: 5px;
+  }
+</style>
+</head>
+<body>
+
+<div id="top">
+  <div class="center"><div>URL: </div><input type="text" id="topUrl" /></div>
+  <div class="right"><input type="button" id="topButton" value="Get" /></div>
+</div>
+
+<div id="main">
+  <div class="left">
+    aa<br />
+    aa<br />
+    aa<br />
+    aa<br />
+    aa<br />
+  </div>
+  <div class="center">
+    aa<br />
+    aa<br />
+    aa<br />
+    aa<br />
+    aa<br />
+  </div>
+</div>
+
+<script src="bundle.js"></script>
+</body>
+</html>
