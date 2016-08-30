@@ -2,6 +2,7 @@
 
 const electron = require('electron');
 const Vue = require('vue');
+const http = require('http');
 
 const {remote} = electron;
 const htmlUtil = remote.require('./lib/htmlUtil');
@@ -19,9 +20,7 @@ const body = new Vue({
   methods: {
     fetch: function() {
       if (data.kickerUrl) {
-        htmlUtil.fetchFormation(data.kickerUrl, function(html) {
-          data.kickerHtml = html;
-        });
+        data.kickerHtml = (fetch) ? "fetch" : "NG";
       }
     }
   },
