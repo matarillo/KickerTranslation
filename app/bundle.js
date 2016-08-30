@@ -53,42 +53,51 @@
 	const {remote} = electron;
 	const htmlUtil = remote.require('./lib/htmlUtil');
 
-	let data = {
-	  fileList: [],
-	  fileText: null,
-	  kickerUrl: 'http://www.kicker.de/news/fussball/bundesliga/spieltag/1-bundesliga/2016-17/1/3317245/taktische-austellung_bayern-muenchen-14_werder-bremen-4.html',
-	  kickerHtml: null
-	};
+	const getAsync = function(url) {
+	  return new Promise(resolve => {
+	    const xhr = new XMLHttpRequest();
+	    xhr.open('GET', url, true);
+	    xhr.onload = () => resolve(xhr.response);
+	    xhr.send();
+	  });
+	}
 
-	const fetchFormation = function(content) {
+	const getFormation = function (text) {
 	  let doc = null;
 	  try {
 	    let parser = new DOMParser();
-	    doc = parser.parseFromString(content, "application/xhtml+xml");
+	    doc = parser.parseFromString(text, "text/html");
 	    if (doc.getElementsByTagName("parsererror").length) {
 	      return "Parse Error";
 	    }
 	  } catch (e) {
-	    return e.message;
+	    return (e.message || e.toString());
 	  }
-	  let target = doc.getElementById("ctrl_taktaufstellung");
-	  if (!target) {
-	    return "Formation Not Found";
+	  const liveFormation = "takAufContainer";
+	  const formation = "ctrl_taktaufstellung";
+	  let target = doc.getElementById(liveFormation);
+	  if (target) {
+	    return target.outerHTML;
 	  }
-	  return target.outerHTML;
-	}
+	  return liveFormation + " not found";
+	};
+
+	let data = {
+	  fileList: [],
+	  fileText: null,
+	  kickerUrl: 'http://www.kicker.de/news/fussball/bundesliga/spieltag/1-bundesliga/2016-17/1/3317245/livetaktischeaufstellung_bayern-muenchen-14_werder-bremen-4.html',
+	  kickerHtml: null
+	};
 
 	const body = new Vue({
 	  el: '#body',
 	  data: data,
 	  methods: {
-	    fetch: function() {
+	    fetch: function () {
 	      if (data.kickerUrl) {
-	        data.kickerHtml = (fetch) ? "fetch" : "NG";
-	        //http.get(data.kickerUrl, function(html) {
-	        //  let content = fetchFormation(html);
-	        //  data.kickerHtml = content;
-	        //});
+	        getAsync(data.kickerUrl).then(function (text) {
+	          data.kickerHtml = getFormation(text);
+	        });
 	      }
 	    }
 	  },
