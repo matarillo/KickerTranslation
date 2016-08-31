@@ -46,12 +46,12 @@
 
 	'use strict';
 
-	const electron = __webpack_require__(1);
-	const Vue = __webpack_require__(2);
-	const http = __webpack_require__(4);
+	//const electron = require('electron');
+	const Vue = __webpack_require__(1);
+	const http = __webpack_require__(3);
 
-	const {remote} = electron;
-	const htmlUtil = remote.require('./lib/htmlUtil');
+	//const {remote} = electron;
+	//const htmlUtil = remote.require('./lib/htmlUtil');
 
 	const getAsync = function(url) {
 	  return new Promise(resolve => {
@@ -110,12 +110,6 @@
 
 /***/ },
 /* 1 */
-/***/ function(module, exports) {
-
-	module.exports = require("electron");
-
-/***/ },
-/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, process) {/*!
@@ -10192,10 +10186,10 @@
 	}, 0);
 
 	module.exports = Vue;
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(2)))
 
 /***/ },
-/* 3 */
+/* 2 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -10361,13 +10355,13 @@
 
 
 /***/ },
-/* 4 */
+/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var http = module.exports;
-	var EventEmitter = __webpack_require__(5).EventEmitter;
-	var Request = __webpack_require__(6);
-	var url = __webpack_require__(31)
+	var EventEmitter = __webpack_require__(4).EventEmitter;
+	var Request = __webpack_require__(5);
+	var url = __webpack_require__(30)
 
 	http.request = function (params, cb) {
 	    if (typeof params === 'string') {
@@ -10511,7 +10505,7 @@
 	};
 
 /***/ },
-/* 5 */
+/* 4 */
 /***/ function(module, exports) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -10819,13 +10813,13 @@
 
 
 /***/ },
-/* 6 */
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Stream = __webpack_require__(7);
-	var Response = __webpack_require__(27);
-	var Base64 = __webpack_require__(30);
-	var inherits = __webpack_require__(8);
+	var Stream = __webpack_require__(6);
+	var Response = __webpack_require__(26);
+	var Base64 = __webpack_require__(29);
+	var inherits = __webpack_require__(7);
 
 	var Request = module.exports = function (xhr, params) {
 	    var self = this;
@@ -11034,7 +11028,7 @@
 
 
 /***/ },
-/* 7 */
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -11060,15 +11054,15 @@
 
 	module.exports = Stream;
 
-	var EE = __webpack_require__(5).EventEmitter;
-	var inherits = __webpack_require__(8);
+	var EE = __webpack_require__(4).EventEmitter;
+	var inherits = __webpack_require__(7);
 
 	inherits(Stream, EE);
-	Stream.Readable = __webpack_require__(9);
-	Stream.Writable = __webpack_require__(23);
-	Stream.Duplex = __webpack_require__(24);
-	Stream.Transform = __webpack_require__(25);
-	Stream.PassThrough = __webpack_require__(26);
+	Stream.Readable = __webpack_require__(8);
+	Stream.Writable = __webpack_require__(22);
+	Stream.Duplex = __webpack_require__(23);
+	Stream.Transform = __webpack_require__(24);
+	Stream.PassThrough = __webpack_require__(25);
 
 	// Backwards-compat with node 0.4.x
 	Stream.Stream = Stream;
@@ -11167,7 +11161,7 @@
 
 
 /***/ },
-/* 8 */
+/* 7 */
 /***/ function(module, exports) {
 
 	if (typeof Object.create === 'function') {
@@ -11196,24 +11190,24 @@
 
 
 /***/ },
-/* 9 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {exports = module.exports = __webpack_require__(10);
-	exports.Stream = __webpack_require__(7);
+	/* WEBPACK VAR INJECTION */(function(process) {exports = module.exports = __webpack_require__(9);
+	exports.Stream = __webpack_require__(6);
 	exports.Readable = exports;
-	exports.Writable = __webpack_require__(19);
-	exports.Duplex = __webpack_require__(18);
-	exports.Transform = __webpack_require__(21);
-	exports.PassThrough = __webpack_require__(22);
+	exports.Writable = __webpack_require__(18);
+	exports.Duplex = __webpack_require__(17);
+	exports.Transform = __webpack_require__(20);
+	exports.PassThrough = __webpack_require__(21);
 	if (!process.browser && process.env.READABLE_STREAM === 'disable') {
-	  module.exports = __webpack_require__(7);
+	  module.exports = __webpack_require__(6);
 	}
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 10 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {// Copyright Joyent, Inc. and other Node contributors.
@@ -11240,17 +11234,17 @@
 	module.exports = Readable;
 
 	/*<replacement>*/
-	var isArray = __webpack_require__(11);
+	var isArray = __webpack_require__(10);
 	/*</replacement>*/
 
 
 	/*<replacement>*/
-	var Buffer = __webpack_require__(12).Buffer;
+	var Buffer = __webpack_require__(11).Buffer;
 	/*</replacement>*/
 
 	Readable.ReadableState = ReadableState;
 
-	var EE = __webpack_require__(5).EventEmitter;
+	var EE = __webpack_require__(4).EventEmitter;
 
 	/*<replacement>*/
 	if (!EE.listenerCount) EE.listenerCount = function(emitter, type) {
@@ -11258,18 +11252,18 @@
 	};
 	/*</replacement>*/
 
-	var Stream = __webpack_require__(7);
+	var Stream = __webpack_require__(6);
 
 	/*<replacement>*/
-	var util = __webpack_require__(16);
-	util.inherits = __webpack_require__(8);
+	var util = __webpack_require__(15);
+	util.inherits = __webpack_require__(7);
 	/*</replacement>*/
 
 	var StringDecoder;
 
 
 	/*<replacement>*/
-	var debug = __webpack_require__(17);
+	var debug = __webpack_require__(16);
 	if (debug && debug.debuglog) {
 	  debug = debug.debuglog('stream');
 	} else {
@@ -11281,7 +11275,7 @@
 	util.inherits(Readable, Stream);
 
 	function ReadableState(options, stream) {
-	  var Duplex = __webpack_require__(18);
+	  var Duplex = __webpack_require__(17);
 
 	  options = options || {};
 
@@ -11342,14 +11336,14 @@
 	  this.encoding = null;
 	  if (options.encoding) {
 	    if (!StringDecoder)
-	      StringDecoder = __webpack_require__(20).StringDecoder;
+	      StringDecoder = __webpack_require__(19).StringDecoder;
 	    this.decoder = new StringDecoder(options.encoding);
 	    this.encoding = options.encoding;
 	  }
 	}
 
 	function Readable(options) {
-	  var Duplex = __webpack_require__(18);
+	  var Duplex = __webpack_require__(17);
 
 	  if (!(this instanceof Readable))
 	    return new Readable(options);
@@ -11452,7 +11446,7 @@
 	// backwards compatibility.
 	Readable.prototype.setEncoding = function(enc) {
 	  if (!StringDecoder)
-	    StringDecoder = __webpack_require__(20).StringDecoder;
+	    StringDecoder = __webpack_require__(19).StringDecoder;
 	  this._readableState.decoder = new StringDecoder(enc);
 	  this._readableState.encoding = enc;
 	  return this;
@@ -12168,10 +12162,10 @@
 	  return -1;
 	}
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 11 */
+/* 10 */
 /***/ function(module, exports) {
 
 	module.exports = Array.isArray || function (arr) {
@@ -12180,7 +12174,7 @@
 
 
 /***/ },
-/* 12 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer, global) {/*!
@@ -12193,9 +12187,9 @@
 
 	'use strict'
 
-	var base64 = __webpack_require__(13)
-	var ieee754 = __webpack_require__(14)
-	var isArray = __webpack_require__(15)
+	var base64 = __webpack_require__(12)
+	var ieee754 = __webpack_require__(13)
+	var isArray = __webpack_require__(14)
 
 	exports.Buffer = Buffer
 	exports.SlowBuffer = SlowBuffer
@@ -13973,10 +13967,10 @@
 	  return val !== val // eslint-disable-line no-self-compare
 	}
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(12).Buffer, (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11).Buffer, (function() { return this; }())))
 
 /***/ },
-/* 13 */
+/* 12 */
 /***/ function(module, exports) {
 
 	'use strict'
@@ -14091,7 +14085,7 @@
 
 
 /***/ },
-/* 14 */
+/* 13 */
 /***/ function(module, exports) {
 
 	exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -14181,7 +14175,7 @@
 
 
 /***/ },
-/* 15 */
+/* 14 */
 /***/ function(module, exports) {
 
 	var toString = {}.toString;
@@ -14192,7 +14186,7 @@
 
 
 /***/ },
-/* 16 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {// Copyright Joyent, Inc. and other Node contributors.
@@ -14303,16 +14297,16 @@
 	  return Object.prototype.toString.call(o);
 	}
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(12).Buffer))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11).Buffer))
 
 /***/ },
-/* 17 */
+/* 16 */
 /***/ function(module, exports) {
 
 	/* (ignored) */
 
 /***/ },
-/* 18 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {// Copyright Joyent, Inc. and other Node contributors.
@@ -14353,12 +14347,12 @@
 
 
 	/*<replacement>*/
-	var util = __webpack_require__(16);
-	util.inherits = __webpack_require__(8);
+	var util = __webpack_require__(15);
+	util.inherits = __webpack_require__(7);
 	/*</replacement>*/
 
-	var Readable = __webpack_require__(10);
-	var Writable = __webpack_require__(19);
+	var Readable = __webpack_require__(9);
+	var Writable = __webpack_require__(18);
 
 	util.inherits(Duplex, Readable);
 
@@ -14405,10 +14399,10 @@
 	  }
 	}
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 19 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {// Copyright Joyent, Inc. and other Node contributors.
@@ -14439,18 +14433,18 @@
 	module.exports = Writable;
 
 	/*<replacement>*/
-	var Buffer = __webpack_require__(12).Buffer;
+	var Buffer = __webpack_require__(11).Buffer;
 	/*</replacement>*/
 
 	Writable.WritableState = WritableState;
 
 
 	/*<replacement>*/
-	var util = __webpack_require__(16);
-	util.inherits = __webpack_require__(8);
+	var util = __webpack_require__(15);
+	util.inherits = __webpack_require__(7);
 	/*</replacement>*/
 
-	var Stream = __webpack_require__(7);
+	var Stream = __webpack_require__(6);
 
 	util.inherits(Writable, Stream);
 
@@ -14461,7 +14455,7 @@
 	}
 
 	function WritableState(options, stream) {
-	  var Duplex = __webpack_require__(18);
+	  var Duplex = __webpack_require__(17);
 
 	  options = options || {};
 
@@ -14549,7 +14543,7 @@
 	}
 
 	function Writable(options) {
-	  var Duplex = __webpack_require__(18);
+	  var Duplex = __webpack_require__(17);
 
 	  // Writable ctor is applied to Duplexes, though they're not
 	  // instanceof Writable, they're instanceof Readable.
@@ -14889,10 +14883,10 @@
 	  state.ended = true;
 	}
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 20 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -14916,7 +14910,7 @@
 	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 	// USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-	var Buffer = __webpack_require__(12).Buffer;
+	var Buffer = __webpack_require__(11).Buffer;
 
 	var isBufferEncoding = Buffer.isEncoding
 	  || function(encoding) {
@@ -15119,7 +15113,7 @@
 
 
 /***/ },
-/* 21 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -15188,11 +15182,11 @@
 
 	module.exports = Transform;
 
-	var Duplex = __webpack_require__(18);
+	var Duplex = __webpack_require__(17);
 
 	/*<replacement>*/
-	var util = __webpack_require__(16);
-	util.inherits = __webpack_require__(8);
+	var util = __webpack_require__(15);
+	util.inherits = __webpack_require__(7);
 	/*</replacement>*/
 
 	util.inherits(Transform, Duplex);
@@ -15334,7 +15328,7 @@
 
 
 /***/ },
-/* 22 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -15364,11 +15358,11 @@
 
 	module.exports = PassThrough;
 
-	var Transform = __webpack_require__(21);
+	var Transform = __webpack_require__(20);
 
 	/*<replacement>*/
-	var util = __webpack_require__(16);
-	util.inherits = __webpack_require__(8);
+	var util = __webpack_require__(15);
+	util.inherits = __webpack_require__(7);
 	/*</replacement>*/
 
 	util.inherits(PassThrough, Transform);
@@ -15386,17 +15380,24 @@
 
 
 /***/ },
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(18)
+
+
+/***/ },
 /* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(19)
+	module.exports = __webpack_require__(17)
 
 
 /***/ },
 /* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(18)
+	module.exports = __webpack_require__(20)
 
 
 /***/ },
@@ -15410,15 +15411,8 @@
 /* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(22)
-
-
-/***/ },
-/* 27 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var Stream = __webpack_require__(7);
-	var util = __webpack_require__(28);
+	var Stream = __webpack_require__(6);
+	var util = __webpack_require__(27);
 
 	var Response = module.exports = function (res) {
 	    this.offset = 0;
@@ -15540,7 +15534,7 @@
 
 
 /***/ },
-/* 28 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, process) {// Copyright Joyent, Inc. and other Node contributors.
@@ -16068,7 +16062,7 @@
 	}
 	exports.isPrimitive = isPrimitive;
 
-	exports.isBuffer = __webpack_require__(29);
+	exports.isBuffer = __webpack_require__(28);
 
 	function objectToString(o) {
 	  return Object.prototype.toString.call(o);
@@ -16112,7 +16106,7 @@
 	 *     prototype.
 	 * @param {function} superCtor Constructor function to inherit prototype from.
 	 */
-	exports.inherits = __webpack_require__(8);
+	exports.inherits = __webpack_require__(7);
 
 	exports._extend = function(origin, add) {
 	  // Don't do anything if add isn't an object
@@ -16130,10 +16124,10 @@
 	  return Object.prototype.hasOwnProperty.call(obj, prop);
 	}
 
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(2)))
 
 /***/ },
-/* 29 */
+/* 28 */
 /***/ function(module, exports) {
 
 	module.exports = function isBuffer(arg) {
@@ -16144,7 +16138,7 @@
 	}
 
 /***/ },
-/* 30 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;(function () {
@@ -16210,7 +16204,7 @@
 
 
 /***/ },
-/* 31 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -16234,7 +16228,7 @@
 	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 	// USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-	var punycode = __webpack_require__(32);
+	var punycode = __webpack_require__(31);
 
 	exports.parse = urlParse;
 	exports.resolve = urlResolve;
@@ -16306,7 +16300,7 @@
 	      'gopher:': true,
 	      'file:': true
 	    },
-	    querystring = __webpack_require__(34);
+	    querystring = __webpack_require__(33);
 
 	function urlParse(url, parseQueryString, slashesDenoteHost) {
 	  if (url && isObject(url) && url instanceof Url) return url;
@@ -16923,7 +16917,7 @@
 
 
 /***/ },
-/* 32 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global) {/*! https://mths.be/punycode v1.3.2 by @mathias */
@@ -17455,10 +17449,10 @@
 
 	}(this));
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(33)(module), (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(32)(module), (function() { return this; }())))
 
 /***/ },
-/* 33 */
+/* 32 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -17474,17 +17468,17 @@
 
 
 /***/ },
-/* 34 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	exports.decode = exports.parse = __webpack_require__(35);
-	exports.encode = exports.stringify = __webpack_require__(36);
+	exports.decode = exports.parse = __webpack_require__(34);
+	exports.encode = exports.stringify = __webpack_require__(35);
 
 
 /***/ },
-/* 35 */
+/* 34 */
 /***/ function(module, exports) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -17570,7 +17564,7 @@
 
 
 /***/ },
-/* 36 */
+/* 35 */
 /***/ function(module, exports) {
 
 	// Copyright Joyent, Inc. and other Node contributors.

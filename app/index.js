@@ -1,11 +1,11 @@
 'use strict';
 
-const electron = require('electron');
+//const electron = require('electron');
 const Vue = require('vue');
 const http = require('http');
 
-const {remote} = electron;
-const htmlUtil = remote.require('./lib/htmlUtil');
+//const {remote} = electron;
+//const htmlUtil = remote.require('./lib/htmlUtil');
 
 const getAsync = function(url) {
   return new Promise(resolve => {
