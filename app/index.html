@@ -1,113 +1,202 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Kicker Translation</title>
-<style type="text/css">
-  #body {
-    padding: 5px;
-  }
-  #top {
-    display: flex;
-    margin-bottom: 10px;
-  }
-  #top>.center {
-    flex: 1;
-    display: flex;
-  }
-  #top>.center>div {
-    width: 48px;
-  }
-  #top>.center>input {
-    flex: 1;
-  }
-  #top>.right {
-    width: 72px;
-    margin-left: 10px;
-  }
-  #top>.right>input {
-    width: 100%;
-  }
-  #main {
-    display:flex;
-  }
-  #main>.left {
-    width: 360px;
-    border: 1px solid #4C3C1B;
-    padding: 5px;
-    margin-right: 10px;
-  }
-  #main>.center {
-    flex: 1;
-    border: 1px solid #4C3C1B;
-    padding: 5px;
-  }
-  #main>.left>input[type="file"] {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-  }
-  .button {
-    box-sizing: border-box;
-    border-radius: 0 3px 3px 0;
-    margin: 0;
-    margin-right: -1px;
-    padding: 1px 6px;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: auto;
-    align-items: center;
-    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
-    border: 1px solid #999;
-    color: #222324;
-    display: inline-flex;
-    font-size: 13.3333px;
-    height: 21px;
-    line-height: 15px;
-    position: relative;
-    vertical-align: top;
-    -webkit-box-pack: center;
-    -webkit-appearance: none;
-    -webkit-box-align: center;
-    justify-content: center;
-    text-align: center;
-    white-space: nowrap;
-    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    overflow: visible;
-    cursor: pointer;
-  }
-  .button:hover {
-    border-color: black;
-  }
-  .button:active {
-    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
-  }
-</style>
-<link id="css" rel="stylesheet" type="text/css" href="kicker.css" />
+  <meta charset="UTF-8">
+  <title>Kicker Translation</title>
+  <style type="text/css">
+    #body {
+      padding: 5px;
+    }
+    
+    #top {
+      display: flex;
+      margin-bottom: 10px;
+    }
+    
+    #top>.center {
+      flex: 1;
+      display: flex;
+    }
+    
+    #top>.center>div {
+      width: 48px;
+    }
+    
+    #top>.center>input {
+      flex: 1;
+    }
+    
+    #top>.right {
+      width: 72px;
+      margin-left: 10px;
+    }
+    
+    #top>.right>input {
+      width: 100%;
+    }
+    
+    #main {
+      display: flex;
+    }
+    
+    #main>.left {
+      width: 360px;
+      border: 1px solid #4C3C1B;
+      padding: 5px;
+      margin-right: 10px;
+    }
+    
+    #main>.center {
+      flex: 1;
+      border: 1px solid #4C3C1B;
+      padding: 5px;
+    }
+    
+    input[type="file"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    
+    .button {
+      box-sizing: border-box;
+      border-radius: 0 3px 3px 0;
+      margin: 0;
+      margin-right: -1px;
+      padding: 1px 6px;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: auto;
+      align-items: center;
+      background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+      border: 1px solid #999;
+      color: #222324;
+      display: inline-flex;
+      font-size: 13.3333px;
+      height: 21px;
+      line-height: 15px;
+      position: relative;
+      vertical-align: top;
+      -webkit-box-pack: center;
+      -webkit-appearance: none;
+      -webkit-box-align: center;
+      justify-content: center;
+      text-align: center;
+      white-space: nowrap;
+      font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      overflow: visible;
+      cursor: pointer;
+    }
+    
+    .button:hover {
+      border-color: black;
+    }
+    
+    .button:active {
+      background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+    }
+    
+    .treeview,
+    .treeview * {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    
+    .treeview label[for]::before {
+      content: "\25b6";
+      display: inline-block;
+      margin: 2px 0 0;
+      width: 13px;
+      height: 13px;
+      vertical-align: top;
+      text-align: center;
+      color: #e74c3c;
+      font-size: 8px;
+      line-height: 13px;
+    }
+    
+    .treeview li ul {
+      margin: 0 0 0 22px;
+    }
+    
+    .treeview * {
+      vertical-align: middle;
+    }
+    
+    .treeview {
+      font: normal 11px/16px "Segoe UI", Arial, Sans-serif;
+    }
+    
+    .treeview li {
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    
+    .treeview input[type="checkbox"] {
+      display: none;
+    }
+    
+    .treeview label {
+      cursor: pointer;
+    }
+    
+    .treeview input[type="checkbox"][id]:checked ~ label[for]::before {
+      content: "\25bc";
+    }
+    
+    .treeview input[type="checkbox"][id]:not(:checked) ~ ul {
+      display: none;
+    }
+    
+    .treeview label:not([for]) {
+      margin: 0 8px 0 0;
+    }
+    
+    .treeview label input:checked + span::before {
+      content: "\2714";
+      box-shadow: 0 0 2px rgba(0, 0, 0, .25) inset;
+      opacity: 1;
+    }
+  </style>
+  <link id="css" rel="stylesheet" type="text/css" href="kicker.css" />
 
 </head>
+
 <body id="body">
 
-<div id="top">
-  <div class="center"><div>URL: </div><input type="text" id="topUrl" v-model="kickerUrl" /></div>
-  <div class="right"><input type="button" id="topButton" value="Fetch" v-on:click="fetch" /></div>
-</div>
-
-<div id="main">
-  <div class="left">
-    <input type="file" id="loader" /><label for="loader" class="button">Data Load</label>
-    <input type="button" id="saver" value="Data Save" class="button" /><br />
-    aa<br />
-    aa<br />
-    aa<br />
+  <div id="top">
+    <div class="center">
+      <div>URL: </div><input type="text" id="topUrl" v-model="kickerUrl" /></div>
+    <div class="right"><input type="button" id="topButton" value="Fetch" v-on:click="fetch" /></div>
   </div>
-  <div class="center" v-html="kickerHtml"></div>
-</div>
 
-<script src="bundle.js"></script>
+  <div id="main">
+    <div class="left">
+      <div>
+        <input type="file" id="loader" /><label for="loader" class="button">Data Load</label>
+        <!--input type="button" id="saver" value="Data Save" class="button" /-->
+      </div>
+      <div class="treeview">
+        <ul>
+          <li v-for="(index, team) in dictionary">
+            <input type="checkbox" id="team-{{index}}" /><label for="team-{{index}}"><span>{{team.de}}</span> - <span>{{team.ja}}</span></label>
+            <ul>
+              <li v-for="member in team.members"><span>{{member.de}}</span> - <span>{{member.ja}}</span></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="center" v-html="kickerHtml"></div>
+  </div>
+
+  <script src="bundle.js"></script>
 </body>
+
 </html>
