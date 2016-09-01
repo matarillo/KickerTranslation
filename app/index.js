@@ -12,6 +12,7 @@ const getAsync = function (url) {
 }
 
 const getFormation = function (text) {
+  /** @type {Document} */
   let doc = null;
   try {
     let parser = new DOMParser();
@@ -20,10 +21,9 @@ const getFormation = function (text) {
       return "Parse Error";
     }
   } catch (e) {
-    return (e.message || e.toString());
+    return (e.message);
   }
   const liveFormation = "takAufContainer";
-  const formation = "ctrl_taktaufstellung";
   let target = doc.getElementById(liveFormation);
   if (target) {
     translate(target);
@@ -32,11 +32,34 @@ const getFormation = function (text) {
   return liveFormation + " not found";
 };
 
+/** @param {HTMLElement} target */
 const translate = function(target) {
-  var teams = target.querySelectorAll('div.taktischeaufstellung > div:not([class="taktAufSplItem"]) > div');
-  var members = target.querySelectorAll('div.taktischeaufstellung > div[class="taktAufSplItem"] > a:last-child');
-  console.log("teams: " + teams.length);
-  console.log("members: " + members.length);
+  const teamElements = target.querySelectorAll('div.taktischeaufstellung > div:not([class="taktAufSplItem"]) > div');
+  const memberElements = target.querySelectorAll('div.taktischeaufstellung > div[class="taktAufSplItem"] > a:last-child');
+  /** @type {{de:string,ja:string}[]} */
+  let members = [];
+  for (let i = 0; i < teamElements.length; i++) {
+    const teamElement = teamElements[i];
+    for (let j = 0; j < data.dictionary.length; j++) {
+      const team = data.dictionary[j];
+      if (teamElement.textContent === team.de) {
+        teamElement.textContent = team.ja;
+        members = members.concat(team.members);
+        break;
+      }
+    }
+  }
+  for (let i = 0; i < memberElements.length; i++) {
+    const memberElement = memberElements[i];
+    const memberTextContent = memberElement.textContent;
+    for (let j = 0; j < members.length; j++) {
+      const member = members[j];
+      if (memberTextContent.indexOf(member.de) == 0) {
+        memberElement.textContent = member.ja + memberTextContent.substr(member.de.length);
+        break;
+      }
+    }
+  }
 }
 
 let data = {
@@ -47,13 +70,13 @@ let data = {
       members: [
         { de: "Neuer", ja: "ノイアー" },
         { de: "Hummels", ja: "フメルス" },
-        { de: "Javi Martínez", ja: "ハビ・マルティネス" },
+        { de: "Javi Martinez", ja: "ハビ・マルティネス" },
         { de: "Alaba", ja: "アラバ" },
         { de: "Lahm", ja: "ラーム" },
         { de: "Xabi Alonso", ja: "シャビ・アロンソ" },
         { de: "Vidal", ja: "ビダル" },
         { de: "Thiago", ja: "ティアゴ" },
-        { de: "F. Ribéry", ja: "F・リベリ" },
+        { de: "F. Ribery", ja: "F・リベリ" },
         { de: "T. Müller", ja: "T・ミュラー" },
         { de: "Lewandowski", ja: "レバンドフスキ" }
       ]
@@ -72,7 +95,7 @@ let data = {
         { de: "S. Yatabaré", ja: "S・ヤタバレ" },
         { de: "Fritz", ja: "フリッツ" },
         { de: "Bartels", ja: "バルテルス" },
-        { de: "Jóhannsson", ja: "ヨハンソン" }
+        { de: "Johannsson", ja: "ヨハンソン" }
       ]
     }
   ],

@@ -52,6 +52,11 @@
       border: 1px solid #4C3C1B;
       padding: 5px;
     }
+
+    #formation {
+      transform: scale(0.8);
+      transform-origin: top left;
+    }
     
     input[type="file"] {
       position: absolute;
@@ -193,7 +198,9 @@
         </ul>
       </div>
     </div>
-    <div class="center" v-html="kickerHtml"></div>
+    <div class="center">
+      <div id="formation" v-html="kickerHtml" />
+    </div>
   </div>
 
   <script src="bundle.js"></script>
