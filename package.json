@@ -4,8 +4,9 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "start": "electron .",
+    "build": "node build.js"
   },
   "author": "",
   "license": "MIT",
@@ -14,6 +15,7 @@
     "vue": "^1.0.26"
   },
   "devDependencies": {
+    "electron-packager": "^7.7.0",
     "webpack": "^1.13.2"
   }
 }
