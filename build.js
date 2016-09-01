@@ -14,7 +14,7 @@ packager({
   overwrite: true,
   asar: true,
   prune: true,
-  ignore: "app/index\.js|node_modules|\.gitignore|webpack\.config\.js|build\.js",
+  ignore: "data|app/index\.js|node_modules|\.gitignore|webpack\.config\.js|build\.js",
 }, function done (err, appPath) {
   if(err) {
     throw new Error(err);
