@@ -11,6 +11,7 @@
 #takAufContainer .taktAufSplItem{position:absolute;width:103px;text-align:center;}
 #takAufContainer .taktAufSplItem div{float:left;width:20px;height:59px;display:block;margin:0 2px;}
 #takAufContainer .taktAufSplItem img{float:left;}
+#takAufContainer .taktAufSplItem a{text-decoration:none;pointer-events:none;}
 #takAufContainer .taktAufSplItem .taktAufStat{border-right:2px solid #B0A9A9;}
 #takAufContainer .taktAufSplItem .taTor,#takAufContainer .taktAufSplItem .taGelb,#takAufContainer .taktAufSplItem .taGelbrot,#takAufContainer .taktAufSplItem .taRot,#takAufContainer .taktAufSplItem .taWechsel{height:18px;width:18px;background-color:#d7d7d7;margin-bottom:2px;}
 #takAufContainer .taktAufSplItem .taTor img,#takAufContainer .taktAufSplItem .taGelb img,#takAufContainer .taktAufSplItem .taGelbrot img,#takAufContainer .taktAufSplItem .taRot img,#takAufContainer .taktAufSplItem .taWechsel img{padding: 1px 0 0 1px;}
