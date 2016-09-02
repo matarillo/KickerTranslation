@@ -33,7 +33,7 @@ const getFormation = function (text) {
 };
 
 /** @param {HTMLElement} target */
-const translate = function(target) {
+const translate = function (target) {
   const teamElements = target.querySelectorAll('div.taktischeaufstellung > div:not([class="taktAufSplItem"]) > div');
   const memberElements = target.querySelectorAll('div.taktischeaufstellung > div[class="taktAufSplItem"] > a:last-child');
   /** @type {{de:string,ja:string}[]} */
@@ -60,7 +60,15 @@ const translate = function(target) {
       }
     }
   }
-}
+};
+
+const readText = function (file, callback) {
+  const reader = new FileReader();
+  reader.onload = function (e) {
+    callback(e.target.result);
+  };
+  reader.readAsText(file);
+};
 
 let data = {
   dictionary: [
@@ -100,19 +108,31 @@ let data = {
     }
   ],
   kickerUrl: 'http://www.kicker.de/news/fussball/bundesliga/spieltag/1-bundesliga/2016-17/1/3317245/livetaktischeaufstellung_bayern-muenchen-14_werder-bremen-4.html',
-  kickerHtml: null
+  kickerHtml: null,
+  scaling: 1.0,
+  font: 1.0
 };
 
 const body = new Vue({
   el: '#body',
   data: data,
+  computed: {
+    formationHeight: function () {
+      return 1055 * this.scaling;
+    }
+  },
   methods: {
-    fetch: function () {
+    fetch: function (e) {
       if (data.kickerUrl) {
         getAsync(data.kickerUrl).then(function (text) {
           data.kickerHtml = getFormation(text);
         });
       }
+    },
+    load: function (e) {
+      readText(e.target.files[0], function (text) {
+        data.dictionary = JSON.parse(text);
+      });
     }
   },
   filters: {
