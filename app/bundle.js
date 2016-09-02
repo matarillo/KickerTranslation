@@ -117,42 +117,7 @@
 	};
 
 	let data = {
-	  dictionary: [
-	    {
-	      de: "Bayern München",
-	      ja: "バイエルン・ミュンヘン",
-	      members: [
-	        { de: "Neuer", ja: "ノイアー" },
-	        { de: "Hummels", ja: "フメルス" },
-	        { de: "Javi Martinez", ja: "ハビ・マルティネス" },
-	        { de: "Alaba", ja: "アラバ" },
-	        { de: "Lahm", ja: "ラーム" },
-	        { de: "Xabi Alonso", ja: "シャビ・アロンソ" },
-	        { de: "Vidal", ja: "ビダル" },
-	        { de: "Thiago", ja: "ティアゴ" },
-	        { de: "F. Ribery", ja: "F・リベリ" },
-	        { de: "T. Müller", ja: "T・ミュラー" },
-	        { de: "Lewandowski", ja: "レバンドフスキ" }
-	      ]
-	    },
-	    {
-	      de: "Werder Bremen",
-	      ja: "ヴェルダー・ブレーメン",
-	      members: [
-	        { de: "Wiedwald", ja: "ヴィートヴァルト" },
-	        { de: "L. Sané", ja: "L・サネ" },
-	        { de: "Caldirola", ja: "カルディローラ" },
-	        { de: "Diagne", ja: "ディアニ" },
-	        { de: "Gebre Selassie", ja: "ゲブレ・セラシェ" },
-	        { de: "Ro. Bauer", ja: "R・バウアー" },
-	        { de: "Grillitsch", ja: "グリリッチュ" },
-	        { de: "S. Yatabaré", ja: "S・ヤタバレ" },
-	        { de: "Fritz", ja: "フリッツ" },
-	        { de: "Bartels", ja: "バルテルス" },
-	        { de: "Johannsson", ja: "ヨハンソン" }
-	      ]
-	    }
-	  ],
+	  dictionary: [],
 	  kickerUrl: 'http://www.kicker.de/news/fussball/bundesliga/spieltag/1-bundesliga/2016-17/1/3317245/livetaktischeaufstellung_bayern-muenchen-14_werder-bremen-4.html',
 	  kickerHtml: null,
 	  scaling: 1.0,
@@ -177,6 +142,7 @@
 	    },
 	    load: function (e) {
 	      readText(e.target.files[0], function (text) {
+	        localStorage.dictionary = text;
 	        data.dictionary = JSON.parse(text);
 	      });
 	    }
@@ -184,7 +150,18 @@
 	  filters: {
 	  },
 	  created: function () {
-	  }
+	    try {
+	      console.log(localStorage.dictionary);
+	      data.dictionary = JSON.parse(localStorage.dictionary);
+	    } catch (e) {
+	      console.error(e);
+	      data.dictionary = [];
+	    }
+	  },
+	});
+
+	document.getElementById("topUrl").addEventListener("focus", function (e) {
+	  e.target.select();
 	});
 
 
