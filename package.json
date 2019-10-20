@@ -1,21 +1,14 @@
 {
-  "name": "kicker-translation",
-  "version": "1.0.0",
+  "name": "electron-sample",
+  "version": "0.1.0",
   "description": "",
   "main": "main.js",
   "scripts": {
-    "webpack": "webpack",
-    "start": "electron .",
-    "build": "node build.js"
+    "start": "electron ."
   },
   "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "marked": "^0.3.6",
-    "vue": "^1.0.26"
-  },
+  "license": "ISC",
   "devDependencies": {
-    "electron-packager": "^7.7.0",
-    "webpack": "^1.13.2"
+    "electron": "^6.0.12"
   }
 }
