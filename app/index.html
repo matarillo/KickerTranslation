@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none'; script-src 'self' 'unsafe-eval';">
-    <script src="vue.min.js"></script>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <div id="app">
-    We are using node {{ nodeVer }},
-    Chrome {{ chromeVer }},
-    and Electron {{ electronVer }}.
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'; connect-src https://www.kicker.de; img-src 'self' https://secure-mediaproxy.kicker.de; child-src 'none'; script-src 'self' 'unsafe-eval';">
+  <title>Kicker Translation</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="kicker.css">
+  <script src="vue.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+
+    <div id="top">
+      <div class="center">
+        <div>URL: </div><input type="text" id="topUrl" v-model="kickerUrl" /></div>
+      <div class="right"><input type="button" id="topButton" value="Fetch" v-on:click="fetch" /></div>
     </div>
-    <script src="index.js"></script>
-  </body>
+    <div id="main">
+      <div class="left">
+        <div>
+          <input type="file" id="loader" accept=".json" v-on:change="load" /><label for="loader" class="button">Data Load</label>
+        </div>
+        <div class="treeview">
+          <ul>
+            <li v-for="(team, index) in dictionary">
+              <input type="checkbox" v-bind:id="['team-'+index]" /><label v-bind:for="['team-'+index]"><span>{{team.de}}</span> - <span>{{team.ja}}</span></label>
+              <ul>
+                <li v-for="member in team.members"><span>{{member.de}}</span> - <span>{{member.ja}}</span></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="center">
+        <div>
+          <label for="scaling">Scaling(All)</label> <input type="range" id="scaling" min="0.5" max="1.5" step="0.05" v-bind:value="scaling" @change="changeScaling"> {{scaling}}<br>
+          <label for="font">Scaling(Font)</label> <input type="range" id="font" min="0.5" max="1.5" step="0.05" v-bind:value="fontScaling" @change="changeFontScaling"> {{fontScaling}}
+        </div>
+        <div id="formation" v-html="kickerHtml" />
+      </div>
+    </div>
+
+  </div>
+  <script src="index.js"></script>
+</body>
 </html>
