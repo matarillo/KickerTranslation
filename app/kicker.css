@@ -1,3 +1,1514 @@
+@font-face {
+  font-family: 'Kicker-IC';
+  src: url("../fonts/kick-fo.eot?38946");
+  src: url("../fonts/kick-fo.eot?38946#iefix") format("embedded-opentype"), url("../fonts/kick-fo.ttf?38946") format("truetype"), url("../fonts/kick-fo.woff?38946") format("woff"), url("../fonts/kick-fo.svg?38946#kick-fo") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+
+/* +++++++++++++++ NICHT ENTFERNEN!!!!! FUER NAVIGATION EXTRA +++++++++++++++++ */
+.kick__icon-Navigation_U21:before {
+  content: "\ea7a"; }
+
+.kick__icon-Navigation_Nationsleague:before {
+  content: "\ea79"; }
+
+.kick__icon-Regionalliga:before {
+  content: "\ea32"; }
+
+.kick__icon-Rad:before {
+  content: "\e9e1"; }
+
+/* +++++++++++++++ NICHT ENTFERNEN!!!!! FUER NAVIGATION EXTRA +++++++++++++++++ */
+.kick__icon-tuneIn:before {
+  content: "\eaba"; }
+
+.kick__icon-Elfmeter_verschossen_annuliert:before {
+  content: "\eab6"; }
+
+.kick__icon-Belag:before {
+  content: "\eab5"; }
+
+.kick__icon-Teilnehmer_doppel:before {
+  content: "\eab7"; }
+
+.kick__icon-Teilnehmer_einzel:before {
+  content: "\eab8"; }
+
+.kick__icon-Managerspiel:before {
+  content: "\eab9"; }
+
+.kick__icon-Torjaegerkanone:before {
+  content: "\eab3"; }
+
+.kick__icon-Elfmeter_verschossen:before {
+  content: "\eab4"; }
+
+.kick__icon-Tabelle:before {
+  content: "\eab0"; }
+
+.kick__icon-Verschossen:before {
+  content: "\eab1"; }
+
+.kick__icon-Videobeweisphase:before {
+  content: "\eab2"; }
+
+.kick__icon-Audionow:before {
+  content: "\ea72"; }
+
+.kick__icon-Bank:before {
+  content: "\ea71"; }
+
+.kick__icon-Esfehlen:before {
+  content: "\ea70"; }
+
+.kick__icon-Audionow_02:before {
+  content: "\eaaf"; }
+
+.kick__icon-Itunes:before {
+  content: "\ea6c"; }
+
+.kick__icon-Deezer:before {
+  content: "\ea6d"; }
+
+.kick__icon-Google_podcast:before {
+  content: "\ea6e"; }
+
+.kick__icon-Spotify:before {
+  content: "\ea6f"; }
+
+.kick__icon-News02_DICK:before {
+  content: "\eaac"; }
+
+.kick__icon-Reload_gespiegelt:before {
+  content: "\eaad"; }
+
+.kick__icon-Wechsel:before {
+  content: "\eaae"; }
+
+.kick__icon-Wechsel_abgang:before {
+  content: "\eaa8"; }
+
+.kick__icon-Wechsel_zugang:before {
+  content: "\eaa9"; }
+
+.kick__icon-Tippspiel:before {
+  content: "\eaab"; }
+
+.kick__icon-Tippspiel_DICK:before {
+  content: "\eaaa"; }
+
+.kick__icon-Sechseck_DICK:before {
+  content: "\eaa7"; }
+
+.kick__icon-Halbzeit:before {
+  content: "\eaa0"; }
+
+.kick__icon-Laufleistung:before {
+  content: "\eaa6"; }
+
+.kick__icon-open_resort:before {
+  content: "\ea96"; }
+
+.kick__icon-Spielabgebrochen02:before {
+  content: "\ea97"; }
+
+.kick__icon-Spielabgebrochen:before {
+  content: "\ea98"; }
+
+.kick__icon-player_profile:before {
+  content: "\ea99"; }
+
+.kick__icon-Teamliste:before {
+  content: "\ea9a"; }
+
+.kick__icon-socialmedia:before {
+  content: "\ea9b"; }
+
+.kick__icon-Cards:before {
+  content: "\ea9c"; }
+
+.kick__icon-Topplayer:before {
+  content: "\ea9d"; }
+
+.kick__icon-Goalgetter:before {
+  content: "\ea9e"; }
+
+.kick__icon-Scorer:before {
+  content: "\ea9f"; }
+
+.kick__icon-Elf_des_tages:before {
+  content: "\eaa1"; }
+
+.kick__icon-Spieler_des_tages:before {
+  content: "\eaa2"; }
+
+.kick__icon-Tickaroo:before {
+  content: "\eaa3"; }
+
+.kick__icon-Soccerconference:before {
+  content: "\eaa4"; }
+
+.kick__icon-Drawing:before {
+  content: "\eaa5"; }
+
+.kick__icon-reset:before {
+  content: "\ea95"; }
+
+.kick__icon-U21_02:before {
+  content: "\ea94"; }
+
+.kick__icon-Dropnull02:before {
+  content: "\ea91"; }
+
+.kick__icon-Dropdown02:before {
+  content: "\ea90"; }
+
+.kick__icon-Dropup02:before {
+  content: "\ea92"; }
+
+.kick__icon-Popup:before {
+  content: "\ea93"; }
+
+.kick__icon-Artikel_news:before {
+  content: "\ea89"; }
+
+.kick__icon-Checkmark:before {
+  content: "\ea8a"; }
+
+.kick__icon-Pin:before {
+  content: "\ea8b"; }
+
+.kick__icon-Unpin:before {
+  content: "\ea8c"; }
+
+.kick__icon-Wechsel_raus:before {
+  content: "\ea8d"; }
+
+.kick__icon-Wechsel_rein:before {
+  content: "\ea8e"; }
+
+.kick__icon-Zweite_Bundesliga_Pokal:before {
+  content: "\ea8f"; }
+
+.kick__icon-Facebook_Sechseck:before {
+  content: "\ea83"; }
+
+.kick__icon-Mail_Sechseck:before {
+  content: "\ea84"; }
+
+.kick__icon-Messenger_Sechseck:before {
+  content: "\ea85"; }
+
+.kick__icon-Telegram_Sechseck:before {
+  content: "\ea86"; }
+
+.kick__icon-Twitter_Sechseck:before {
+  content: "\ea87"; }
+
+.kick__icon-Whats_app_Sechseck:before {
+  content: "\ea88"; }
+
+.kick__icon-Bearbeiten:before {
+  content: "\ea7b"; }
+
+.kick__icon-Instagram02:before {
+  content: "\ea7c"; }
+
+.kick__icon-Mail02:before {
+  content: "\ea7d"; }
+
+.kick__icon-Messenger02:before {
+  content: "\ea7e"; }
+
+.kick__icon-Telegram02:before {
+  content: "\ea7f"; }
+
+.kick__icon-Whats_app02:before {
+  content: "\ea80"; }
+
+.kick__icon-Youtube02:before {
+  content: "\ea81"; }
+
+.kick__icon-Youtube02_solo:before {
+  content: "\ea82"; }
+
+.kick__icon-Nationsleague:before {
+  content: "\ea79"; }
+
+.kick__icon-U21:before {
+  content: "\ea7a"; }
+
+.kick__icon-Einstellungen:before {
+  content: "\ea6a"; }
+
+.kick__icon-Filter:before {
+  content: "\ea6b"; }
+
+.kick__icon-Filter_DICK:before {
+  content: "\ea73"; }
+
+.kick__icon-Navigation_DFB:before {
+  content: "\ea74"; }
+
+.kick__icon-Navigation_EL:before {
+  content: "\ea75"; }
+
+.kick__icon-Navigation_EM:before {
+  content: "\ea76"; }
+
+.kick__icon-Navigation_Frauen:before {
+  content: "\ea77"; }
+
+.kick__icon-Navigation_WM:before {
+  content: "\ea78"; }
+
+.kick__icon-Abo:before {
+  content: "\ea55"; }
+
+.kick__icon-Facebook_solo:before {
+  content: "\ea56"; }
+
+.kick__icon-Facebook_inline:before {
+  content: "\ea57"; }
+
+.kick__icon-Games:before {
+  content: "\ea58"; }
+
+.kick__icon-Help:before {
+  content: "\ea59"; }
+
+.kick__icon-Instagram_solo:before {
+  content: "\ea5a"; }
+
+.kick__icon-Kicker_TV:before {
+  content: "\ea5b"; }
+
+.kick__icon-Live_solo:before {
+  content: "\ea5c"; }
+
+.kick__icon-logout:before {
+  content: "\ea5d"; }
+
+.kick__icon-Messenger_solo:before {
+  content: "\ea5e"; }
+
+.kick__icon-News_solo:before {
+  content: "\ea5f"; }
+
+.kick__icon-Newsletter_solo:before {
+  content: "\ea60"; }
+
+.kick__icon-Podcast:before {
+  content: "\ea61"; }
+
+.kick__icon-RSS:before {
+  content: "\ea62"; }
+
+.kick__icon-Share_solo:before {
+  content: "\ea63"; }
+
+.kick__icon-Shop:before {
+  content: "\ea64"; }
+
+.kick__icon-Telegram_solo:before {
+  content: "\ea65"; }
+
+.kick__icon-Twitter_solo:before {
+  content: "\ea66"; }
+
+.kick__icon-Twitter_inline_solo:before {
+  content: "\ea67"; }
+
+.kick__icon-Whatsapp_solo:before {
+  content: "\ea68"; }
+
+.kick__icon-Youtube_solo:before {
+  content: "\ea69"; }
+
+.kick__icon-EM_Pokal:before {
+  content: "\ea48"; }
+
+.kick__icon-EM_Pokal_DICK:before {
+  content: "\ea49"; }
+
+.kick__icon-Esports:before {
+  content: "\ea4a"; }
+
+.kick__icon-Esports_DICK:before {
+  content: "\ea4b"; }
+
+.kick__icon-Mehr_Sport:before {
+  content: "\ea4c"; }
+
+.kick__icon-Mehr_Sport_DICK:before {
+  content: "\ea4d"; }
+
+.kick__icon-Streaming:before {
+  content: "\ea4e"; }
+
+.kick__icon-Streaming_DICK:before {
+  content: "\ea4f"; }
+
+.kick__icon-Verein_hinzufuegen:before {
+  content: "\ea50"; }
+
+.kick__icon-Verein_hinzufuegen_DICK:before {
+  content: "\ea51"; }
+
+.kick__icon-Vereine_und_Liegen:before {
+  content: "\ea52"; }
+
+.kick__icon-Vereine_und_Liegen_DICK:before {
+  content: "\ea53"; }
+
+.kick__icon-Fussball_DICK:before {
+  content: "\ea54"; }
+
+.kick__icon-B5_aktuell:before {
+  content: "\ea01"; }
+
+.kick__icon-B5_plus:before {
+  content: "\ea02"; }
+
+.kick__icon-Das_Erste:before {
+  content: "\ea03"; }
+
+.kick__icon-Das_Erste_HD:before {
+  content: "\ea04"; }
+
+.kick__icon-Das_Erste_Mediathek:before {
+  content: "\ea05"; }
+
+.kick__icon-DAZN:before {
+  content: "\ea06"; }
+
+.kick__icon-DFB_App:before {
+  content: "\ea07"; }
+
+.kick__icon-Eurosport:before {
+  content: "\ea08"; }
+
+.kick__icon-Eurosport_HD:before {
+  content: "\ea09"; }
+
+.kick__icon-Eurosport_Player:before {
+  content: "\ea0a"; }
+
+.kick__icon-Hr_Info:before {
+  content: "\ea0b"; }
+
+.kick__icon-MDR_Aktuell:before {
+  content: "\ea0c"; }
+
+.kick__icon-NDR_Info:before {
+  content: "\ea0d"; }
+
+.kick__icon-OE_24:before {
+  content: "\ea0e"; }
+
+.kick__icon-One_HD:before {
+  content: "\ea0f"; }
+
+.kick__icon-ORF_2:before {
+  content: "\ea10"; }
+
+.kick__icon-ORF_2_HD:before {
+  content: "\ea11"; }
+
+.kick__icon-ORF_Eins:before {
+  content: "\ea12"; }
+
+.kick__icon-ORF_Eins_HD:before {
+  content: "\ea13"; }
+
+.kick__icon-ORF_Sport:before {
+  content: "\ea14"; }
+
+.kick__icon-ORF_TV_THEK:before {
+  content: "\ea15"; }
+
+.kick__icon-Radio_SRF_3:before {
+  content: "\ea16"; }
+
+.kick__icon-RSI_LA2:before {
+  content: "\ea17"; }
+
+.kick__icon-RSI_Livestream:before {
+  content: "\ea18"; }
+
+.kick__icon-RTS_deux:before {
+  content: "\ea19"; }
+
+.kick__icon-RTS_Sport:before {
+  content: "\ea1a"; }
+
+.kick__icon-Sport_1:before {
+  content: "\ea1b"; }
+
+.kick__icon-Sport_1_HD:before {
+  content: "\ea1c"; }
+
+.kick__icon-Sport_1plus:before {
+  content: "\ea1d"; }
+
+.kick__icon-Sport_1plus_HD:before {
+  content: "\ea1e"; }
+
+.kick__icon-SRF_Info:before {
+  content: "\ea1f"; }
+
+.kick__icon-SRF_Info_HD:before {
+  content: "\ea20"; }
+
+.kick__icon-SRF_Player:before {
+  content: "\ea21"; }
+
+.kick__icon-SRF_Zwei:before {
+  content: "\ea22"; }
+
+.kick__icon-SRF_Zwei_HD:before {
+  content: "\ea23"; }
+
+.kick__icon-TF_1:before {
+  content: "\ea24"; }
+
+.kick__icon-WDR_Event:before {
+  content: "\ea25"; }
+
+.kick__icon-ZDF:before {
+  content: "\ea26"; }
+
+.kick__icon-ZDF_HD:before {
+  content: "\ea27"; }
+
+.kick__icon-ZDF_Info:before {
+  content: "\ea28"; }
+
+.kick__icon-ZDF_Media:before {
+  content: "\ea29"; }
+
+.kick__icon-ZDF_Media_HD:before {
+  content: "\ea2a"; }
+
+.kick__icon-Amateure:before {
+  content: "\ea2b"; }
+
+.kick__icon-Bundesliga:before {
+  content: "\ea2c"; }
+
+.kick__icon-Championsleague:before {
+  content: "\ea2d"; }
+
+.kick__icon-Crowdfunding:before {
+  content: "\ea2e"; }
+
+.kick__icon-Dritte_Bundesliga:before {
+  content: "\ea2f"; }
+
+.kick__icon-Fifa:before {
+  content: "\ea30"; }
+
+.kick__icon-International:before {
+  content: "\ea31"; }
+
+.kick__icon-Junioren:before {
+  content: "\ea32"; }
+
+.kick__icon-LoL:before {
+  content: "\ea33"; }
+
+.kick__icon-Nationalelf:before {
+  content: "\ea34"; }
+
+.kick__icon-Zweite_Bundesliga:before {
+  content: "\ea35"; }
+
+.kick__icon-Confedcup:before {
+  content: "\ea36"; }
+
+.kick__icon-Confedcup_DICK:before {
+  content: "\ea37"; }
+
+.kick__icon-Keinstatus:before {
+  content: "\ea38"; }
+
+.kick__icon-Keinstatus_DICK:before {
+  content: "\ea39"; }
+
+.kick__icon-Keinthema:before {
+  content: "\ea3a"; }
+
+.kick__icon-Keinthema_DICK:before {
+  content: "\ea3b"; }
+
+.kick__icon-Logout:before {
+  content: "\ea3c"; }
+
+.kick__icon-Logout_DICK:before {
+  content: "\ea3d"; }
+
+.kick__icon-Lupe:before {
+  content: "\ea3e"; }
+
+.kick__icon-Lupe_DICK:before {
+  content: "\ea3f"; }
+
+.kick__icon-Person:before {
+  content: "\ea40"; }
+
+.kick__icon-Person_DICK:before {
+  content: "\ea41"; }
+
+.kick__icon-Person_sechseck:before {
+  content: "\ea42"; }
+
+.kick__icon-Thumbnails:before {
+  content: "\ea43"; }
+
+.kick__icon-Verein_Default:before {
+  content: "\ea44"; }
+
+.kick__icon-Verein_Default_DICK:before {
+  content: "\ea45"; }
+
+.kick__icon-Vertragsverlaengerung:before {
+  content: "\ea46"; }
+
+.kick__icon-Vertragsverlaengerung_DICK:before {
+  content: "\ea47"; }
+
+.kick__icon-Videobeweis02_DICK:before {
+  content: "\e9a5"; }
+
+.kick__icon-Videobeweis_DICK:before {
+  content: "\e9a6"; }
+
+.kick__icon-Vid_DICK:before {
+  content: "\e9a7"; }
+
+.kick__icon-Vid:before {
+  content: "\e9a8"; }
+
+.kick__icon-TV_DICK:before {
+  content: "\e9a9"; }
+
+.kick__icon-TV:before {
+  content: "\e9aa"; }
+
+.kick__icon-Tennis_DICK:before {
+  content: "\e9ab"; }
+
+.kick__icon-Tennis02_DICK:before {
+  content: "\e9ac"; }
+
+.kick__icon-Spieler_des_Spiels_DICK:before {
+  content: "\e9ad"; }
+
+.kick__icon-Spieler_des_Spiels:before {
+  content: "\e9ae"; }
+
+.kick__icon-Sechseck_Outline_DICK:before {
+  content: "\e9af"; }
+
+.kick__icon-Sechseck_Outline:before {
+  content: "\e9b0"; }
+
+.kick__icon-Sechseck:before {
+  content: "\e9b1"; }
+
+.kick__icon-Rechner_DICK:before {
+  content: "\e9b2"; }
+
+.kick__icon-Pfeil_01:before {
+  content: "\e9b3"; }
+
+.kick__icon-Pfeil_01_DICK:before {
+  content: "\e9b4"; }
+
+.kick__icon-Pfeil02_DICK:before {
+  content: "\e9b5"; }
+
+.kick__icon-Olympia02_DICK:before {
+  content: "\e9b6"; }
+
+.kick__icon-Olympia02:before {
+  content: "\e9b7"; }
+
+.kick__icon-News_DICK:before {
+  content: "\e9b8"; }
+
+.kick__icon-Medizincheck_DICK:before {
+  content: "\e9b9"; }
+
+.kick__icon-Link_DICK:before {
+  content: "\e9ba"; }
+
+.kick__icon-Informationen:before {
+  content: "\e9bb"; }
+
+.kick__icon-Informationen_DICK:before {
+  content: "\e9bc"; }
+
+.kick__icon-Handball02_DICK:before {
+  content: "\e9bd"; }
+
+.kick__icon-Handball_DICK:before {
+  content: "\e9be"; }
+
+.kick__icon-F1_DICK:before {
+  content: "\e9bf"; }
+
+.kick__icon-F1:before {
+  content: "\e9c0"; }
+
+.kick__icon-Ergebnis_DICK:before {
+  content: "\e9c1"; }
+
+.kick__icon-Ergebnis:before {
+  content: "\e9c2"; }
+
+.kick__icon-DropUp_DICK:before {
+  content: "\e9c3"; }
+
+.kick__icon-DropRight_DICK:before {
+  content: "\e9c4"; }
+
+.kick__icon-DropLeft_DICK:before {
+  content: "\e9c5"; }
+
+.kick__icon-DropDown_DICK:before {
+  content: "\e9c6"; }
+
+.kick__icon-Chancen_DICK:before {
+  content: "\e9c7"; }
+
+.kick__icon-Captain_DICK:before {
+  content: "\e9c8"; }
+
+.kick__icon-Basketball02_DICK:before {
+  content: "\e9c9"; }
+
+.kick__icon-Autosport_DICK:before {
+  content: "\e9ca"; }
+
+.kick__icon-Anstoss_DICK:before {
+  content: "\e9cb"; }
+
+.kick__icon-Plus_DICK:before {
+  content: "\e9cc"; }
+
+.kick__icon-Minus_DICK:before {
+  content: "\e9cd"; }
+
+.kick__icon-Minus:before {
+  content: "\e9ce"; }
+
+.kick__icon-NFL_DICK:before {
+  content: "\e9cf"; }
+
+.kick__icon-NFL02_DICK:before {
+  content: "\e9d0"; }
+
+.kick__icon-Olympia:before {
+  content: "\e9d1"; }
+
+.kick__icon-Vertragsgespraech:before {
+  content: "\e9d2"; }
+
+.kick__icon-Wintersport_DICK:before {
+  content: "\e9d3"; }
+
+.kick__icon-Wintersport02_DICK:before {
+  content: "\e9d4"; }
+
+.kick__icon-Abonieren_Dick:before {
+  content: "\e9d5"; }
+
+.kick__icon-Icon_line_DICK:before {
+  content: "\e9d6"; }
+
+.kick__icon-Icon_line:before {
+  content: "\e9d7"; }
+
+.kick__icon-Elfmeter_DICK:before {
+  content: "\e9d8"; }
+
+.kick__icon-Elfmeter:before {
+  content: "\e9d9"; }
+
+.kick__icon-Eishockey02_DICK:before {
+  content: "\e9da"; }
+
+.kick__icon-Eishockey_DICK:before {
+  content: "\e9db"; }
+
+.kick__icon-Eckball_DICK:before {
+  content: "\e9dc"; }
+
+.kick__icon-Durchschnitt_DICK:before {
+  content: "\e9dd"; }
+
+.kick__icon-Biathlon02_DICK:before {
+  content: "\e9de"; }
+
+.kick__icon-Biathlon02:before {
+  content: "\e9df"; }
+
+.kick__icon-Biathlon_DICK:before {
+  content: "\e9e0"; }
+
+.kick__icon-Radsport_DICK:before {
+  content: "\e9e1"; }
+
+.kick__icon-Punktverlust:before {
+  content: "\e9e2"; }
+
+.kick__icon-Punktgewinn:before {
+  content: "\e9e3"; }
+
+.kick__icon-Live:before {
+  content: "\e9e4"; }
+
+.kick__icon-Userkommentar02_DICK:before {
+  content: "\e9e5"; }
+
+.kick__icon-Kommentare_DICK:before {
+  content: "\e9e6"; }
+
+.kick__icon-Kommentar_DICK:before {
+  content: "\e9e7"; }
+
+.kick__icon-Userkommentar01_DICK:before {
+  content: "\e9e8"; }
+
+.kick__icon-Karte:before {
+  content: "\e9e9"; }
+
+.kick__icon-Kalender_DICK:before {
+  content: "\e9ea"; }
+
+.kick__icon-Instagram_DICK:before {
+  content: "\e9eb"; }
+
+.kick__icon-Transfer_DICK:before {
+  content: "\e9ec"; }
+
+.kick__icon-Wechsel01_DICK:before {
+  content: "\e9ed"; }
+
+.kick__icon-Schiedsrichter_DICK:before {
+  content: "\e9ee"; }
+
+.kick__icon-Reload_DICK:before {
+  content: "\e9ef"; }
+
+.kick__icon-Umfrage_DICK:before {
+  content: "\e9f0"; }
+
+.kick__icon-Zuschauer_DICK:before {
+  content: "\e9f1"; }
+
+.kick__icon-Sound_DICK:before {
+  content: "\e9f2"; }
+
+.kick__icon-Sound:before {
+  content: "\e9f3"; }
+
+.kick__icon-Vertragsgespraech_DICK:before {
+  content: "\e9f4"; }
+
+.kick__icon-Vertragsverhandlung_DICK:before {
+  content: "\e9f5"; }
+
+.kick__icon-Vertragsbestaetigung_DICK:before {
+  content: "\e9f6"; }
+
+.kick__icon-Vertragsabsage_DICK:before {
+  content: "\e9f7"; }
+
+.kick__icon-Mail:before {
+  content: "\e99f"; }
+
+.kick__icon-Mail_DICK:before {
+  content: "\e9a0"; }
+
+.kick__icon-Mute:before {
+  content: "\e9a1"; }
+
+.kick__icon-Mute_DICK:before {
+  content: "\e9a2"; }
+
+.kick__icon-Twitter_DICK:before {
+  content: "\e9a3"; }
+
+.kick__icon-Facebook_DICK:before {
+  content: "\e9a4"; }
+
+.kick__icon-icon-line:before {
+  content: "\e984"; }
+
+.kick__icon-Basketball_DICK:before {
+  content: "\e973"; }
+
+.kick__icon-Abpfiff_DICK:before {
+  content: "\e967"; }
+
+.kick__icon-Abziehen_DICK1:before {
+  content: "\e968"; }
+
+.kick__icon-Ansto:before {
+  content: "\e969"; }
+
+.kick__icon-Ansto_DICK:before {
+  content: "\e96a"; }
+
+.kick__icon-Archiv_DICK:before {
+  content: "\e96b"; }
+
+.kick__icon-Bewegen_DICK1:before {
+  content: "\e96c"; }
+
+.kick__icon-Hinzufgen_DICK1:before {
+  content: "\e96d"; }
+
+.kick__icon-Pause_DICK1:before {
+  content: "\e96e"; }
+
+.kick__icon-Play_DICK:before {
+  content: "\e96f"; }
+
+.kick__icon-Share_DICK:before {
+  content: "\e970"; }
+
+.kick__icon-Spielstaette_DICK:before {
+  content: "\e971"; }
+
+.kick__icon-Trash_DICK:before {
+  content: "\e972"; }
+
+.kick__icon-BASKETBALL02_DICK:before {
+  content: "\e974"; }
+
+.kick__icon-CL_Pokal_DICK:before {
+  content: "\e975"; }
+
+.kick__icon-DEFAULT_Pokal:before {
+  content: "\e976"; }
+
+.kick__icon-DEFAULT_Pokal_DICK:before {
+  content: "\e977"; }
+
+.kick__icon-DEU_Pokal:before {
+  content: "\e978"; }
+
+.kick__icon-DFB_Pokal_DICK:before {
+  content: "\e979"; }
+
+.kick__icon-DPB_Pokal:before, .kick__icon-DFB_Pokal:before {
+  content: "\e97a"; }
+
+.kick__icon-ENG_Pokal_DICK:before {
+  content: "\e97b"; }
+
+.kick__icon-ESP_Pokal:before {
+  content: "\e97c"; }
+
+.kick__icon-ESP_Pokal_DICK:before {
+  content: "\e97d"; }
+
+.kick__icon-EUROPA_Pokal_DICK:before {
+  content: "\e97e"; }
+
+.kick__icon-FR_Pokal:before {
+  content: "\e97f"; }
+
+.kick__icon-FR_Pokal_DICK:before {
+  content: "\e980"; }
+
+.kick__icon-ITA_Pokal:before {
+  content: "\e981"; }
+
+.kick__icon-ITA_Pokal_DICK:before {
+  content: "\e982"; }
+
+.kick__icon-WM_Pokal_DICK:before {
+  content: "\e983"; }
+
+.kick__icon-CL_Pokal:before {
+  content: "\e963"; }
+
+.kick__icon-ENG_Pokal:before {
+  content: "\e964"; }
+
+.kick__icon-EUROPA_Pokal:before {
+  content: "\e965"; }
+
+.kick__icon-WM_Pokal:before {
+  content: "\e966"; }
+
+.kick__icon-spinner:before {
+  content: "\e962"; }
+
+.kick__icon-reload:before {
+  content: "\e961"; }
+
+.kick__icon-DropNull:before {
+  content: "\e960"; }
+
+.kick__icon-DropLeft:before {
+  content: "\e95d"; }
+
+.kick__icon-DropRight:before {
+  content: "\e95e"; }
+
+.kick__icon-DropUp:before {
+  content: "\e95f"; }
+
+.kick__icon-Hinzufuegen:before {
+  content: "\e959"; }
+
+.kick__icon-Abziehen:before {
+  content: "\e954"; }
+
+.kick__icon-Archiv:before {
+  content: "\e955"; }
+
+.kick__icon-Bewegen:before {
+  content: "\e956"; }
+
+.kick__icon-DropDown:before {
+  content: "\e957"; }
+
+.kick__icon-Foto_Dick1:before {
+  content: "\e958"; }
+
+.kick__icon-Pfeil_Dick:before {
+  content: "\e95a"; }
+
+.kick__icon-Share:before {
+  content: "\e95b"; }
+
+.kick__icon-Trash:before {
+  content: "\e95c"; }
+
+.kick__icon-Durchschnitt:before {
+  content: "\e94a"; }
+
+.kick__icon-Kicker:before {
+  content: "\e94b"; }
+
+.kick__icon-KickerK:before {
+  content: "\e94c"; }
+
+.kick__icon-Kommentar01:before {
+  content: "\e94d"; }
+
+.kick__icon-Kommentar02:before {
+  content: "\e94e"; }
+
+.kick__icon-Plus:before {
+  content: "\e94f"; }
+
+.kick__icon-Userkommentar01:before {
+  content: "\e950"; }
+
+.kick__icon-Userkommentar02:before {
+  content: "\e951"; }
+
+.kick__icon-Vote:before {
+  content: "\e952"; }
+
+.kick__icon-X:before {
+  content: "\e953"; }
+
+.kick__icon-Fussball:before {
+  content: "\e923"; }
+
+.kick__icon-Abonieren:before {
+  content: "\e912"; }
+
+.kick__icon-Abpfiff:before {
+  content: "\e913"; }
+
+.kick__icon-Anstoss:before {
+  content: "\e914"; }
+
+.kick__icon-Anstoss02:before {
+  content: "\e915"; }
+
+.kick__icon-Autosport:before {
+  content: "\e916"; }
+
+.kick__icon-Basketball:before {
+  content: "\e917"; }
+
+.kick__icon-Basketball02:before {
+  content: "\e918"; }
+
+.kick__icon-Biathlon:before {
+  content: "\e919"; }
+
+.kick__icon-Chancen:before {
+  content: "\e91a"; }
+
+.kick__icon-Eckball:before {
+  content: "\e91b"; }
+
+.kick__icon-Eishockey:before {
+  content: "\e91c"; }
+
+.kick__icon-Eishockey02:before {
+  content: "\e91d"; }
+
+.kick__icon-Elfmeter01:before {
+  content: "\e91e"; }
+
+.kick__icon-Elfmeter02:before {
+  content: "\e91f"; }
+
+.kick__icon-Elfmeter03:before {
+  content: "\e920"; }
+
+.kick__icon-Elfmeter04:before {
+  content: "\e921"; }
+
+.kick__icon-Facebook:before {
+  content: "\e922"; }
+
+.kick__icon-Handball:before {
+  content: "\e924"; }
+
+.kick__icon-Handball02:before {
+  content: "\e925"; }
+
+.kick__icon-Instagram:before {
+  content: "\e926"; }
+
+.kick__icon-Kalender:before {
+  content: "\e927"; }
+
+.kick__icon-Kommentar:before {
+  content: "\e928"; }
+
+.kick__icon-Kommentare:before {
+  content: "\e929"; }
+
+.kick__icon-Link:before {
+  content: "\e92a"; }
+
+.kick__icon-Medizincheck:before {
+  content: "\e92b"; }
+
+.kick__icon-News:before {
+  content: "\e92c"; }
+
+.kick__icon-NFL:before {
+  content: "\e92d"; }
+
+.kick__icon-NFL02:before {
+  content: "\e92e"; }
+
+.kick__icon-Pause:before {
+  content: "\e92f"; }
+
+.kick__icon-Pfeil01:before {
+  content: "\e930"; }
+
+.kick__icon-Pfeil02:before {
+  content: "\e931"; }
+
+.kick__icon-Pfeil03:before {
+  content: "\e932"; }
+
+.kick__icon-Pfeil04:before {
+  content: "\e933"; }
+
+.kick__icon-Play:before {
+  content: "\e934"; }
+
+.kick__icon-Radsport:before {
+  content: "\e935"; }
+
+.kick__icon-Schiedsrichter:before {
+  content: "\e936"; }
+
+.kick__icon-Spielstaette:before {
+  content: "\e937"; }
+
+.kick__icon-Tennis:before {
+  content: "\e938"; }
+
+.kick__icon-Tennis02:before {
+  content: "\e939"; }
+
+.kick__icon-Transfer:before {
+  content: "\e93a"; }
+
+.kick__icon-Twitter:before {
+  content: "\e93b"; }
+
+.kick__icon-Umfrage:before {
+  content: "\e93c"; }
+
+.kick__icon-Userkommentar:before {
+  content: "\e93d"; }
+
+.kick__icon-Userkommentare:before {
+  content: "\e93e"; }
+
+.kick__icon-Vertragsabsage:before {
+  content: "\e93f"; }
+
+.kick__icon-Vertragsbestaetigung:before {
+  content: "\e940"; }
+
+.kick__icon-Vertragsgesgespraech:before {
+  content: "\e941"; }
+
+.kick__icon-Vertragsverhandlung:before {
+  content: "\e942"; }
+
+.kick__icon-Videobeweis:before {
+  content: "\e943"; }
+
+.kick__icon-Videobeweis02:before {
+  content: "\e944"; }
+
+.kick__icon-Wechsel01:before {
+  content: "\e945"; }
+
+.kick__icon-Wechsel02:before {
+  content: "\e946"; }
+
+.kick__icon-Wintersport:before {
+  content: "\e947"; }
+
+.kick__icon-Wintersport02:before {
+  content: "\e948"; }
+
+.kick__icon-Zuschauer:before {
+  content: "\e949"; }
+
+.kick__icon-Captain:before {
+  content: "\e907"; }
+
+.kick__icon-Foto:before {
+  content: "\e90b"; }
+
+.kick__icon-Gelb:before {
+  content: "\e90d"; }
+
+.kick__icon-Information:before {
+  content: "\e90f"; }
+
+.kick__icon-Rechner:before {
+  content: "\e910"; }
+
+.kick__icon-Rot:before {
+  content: "\e911"; }
+
+.kick__icon-kommentar-ic:before {
+  content: "\e90c"; }
+
+.kick__icon-zoom-ic:before {
+  content: "\e90e"; }
+
+.kick__icon-arrow-right:before {
+  content: "\e906"; }
+
+.kick__icon-arrow-down:before {
+  content: "\e908"; }
+
+.kick__icon-arrow-up:before {
+  content: "\e909"; }
+
+.kick__icon-video-ic:before {
+  content: "\e90a"; }
+
+.kick__icon-facebook:before {
+  content: "\e900"; }
+
+.kick__icon-kreis-ic:before {
+  content: "\e901"; }
+
+.kick__icon-twitter:before {
+  content: "\e902"; }
+
+.kick__icon-time-pub:before {
+  content: "\e903"; }
+
+.kick__icon-sechseck:before {
+  content: "\e904"; }
+
+.kick__icon-sechseck-outline:before {
+  content: "\e905"; }
+
+.kick__icon-DEU_Pokal_SECHSECK:before {
+  content: "\e9f8"; }
+
+.kick__icon-ENG_Pokal_SECHSECK:before {
+  content: "\e9f9"; }
+
+.kick__icon-EUROPA_Pokal_SECHSECK:before {
+  content: "\e9fa"; }
+
+.kick__icon-ITA_Pokal_SECHSECK:before {
+  content: "\e9fb"; }
+
+.kick__icon-Schema:before {
+  content: "\e9fc"; }
+
+.kick__icon-Schema_DICK:before {
+  content: "\e9fd"; }
+
+.kick__icon-WM_Pokal_SECHSECK:before {
+  content: "\e9fe"; }
+
+.kick__icon-Vorschau_DICK:before {
+  content: "\e9ff"; }
+
+.kick__icon-Vorschau:before {
+  content: "\ea00"; }
+
+.kick__icon-Analyse:before {
+  content: "\e985"; }
+
+.kick__icon-Analyse_DICK:before {
+  content: "\e986"; }
+
+.kick__icon-CL_Pokal_SECHSECK:before {
+  content: "\e987"; }
+
+.kick__icon-DEFAULT_Pokal_SECHSECK:before {
+  content: "\e988"; }
+
+.kick__icon-Deu_Pokal_SECHSECK:before {
+  content: "\e989"; }
+
+.kick__icon-DFB_Pokal_SECHSECK:before {
+  content: "\e98a"; }
+
+.kick__icon-Eng_Pokal_SECHSECK:before {
+  content: "\e98b"; }
+
+.kick__icon-ESP_Pokal_SECHSECK:before {
+  content: "\e98c"; }
+
+.kick__icon-Europa_Pokal_SECHSECK:before {
+  content: "\e98d"; }
+
+.kick__icon-Fr_Pokal_SECHSECK:before {
+  content: "\e98e"; }
+
+.kick__icon-Ita_Pokal_SECHSECK:before {
+  content: "\e98f"; }
+
+.kick__icon-Radio:before {
+  content: "\e990"; }
+
+.kick__icon-Radio_DICK:before {
+  content: "\e991"; }
+
+.kick__icon-Spielbericht:before {
+  content: "\e992"; }
+
+.kick__icon-Spielbericht_DICK:before {
+  content: "\e993"; }
+
+.kick__icon-Spielinfo:before {
+  content: "\e994"; }
+
+.kick__icon-Spielinfo_DICK:before {
+  content: "\e995"; }
+
+.kick__icon-Thumbs_up:before {
+  content: "\e996"; }
+
+.kick__icon-Thumbs_up_DICK:before {
+  content: "\e997"; }
+
+.kick__icon-Whats_app:before {
+  content: "\e998"; }
+
+.kick__icon-Whats_app_DICK:before {
+  content: "\e999"; }
+
+.kick__icon-Wm_pokal_SECHSECK:before {
+  content: "\e99a"; }
+
+.kick__icon-ard:before {
+  content: "\e99b"; }
+
+.kick__icon-dazn:before {
+  content: "\e99c"; }
+
+.kick__icon-sport1:before {
+  content: "\e99d"; }
+
+.kick__icon-zdf:before {
+  content: "\e99e"; }
+
+
+/* -------------------------------------------------- */
+/*    Box Sizing
+/* -------------------------------------------------- */
+body {
+  box-sizing: border-box; }
+  body *, body *:before, body *:after {
+    box-sizing: inherit; }
+
+
+[class^="kick__icon-"], [class*=" kick__icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Kicker-IC' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  -moz-font-smoothing: antialiased !important;
+  -o-font-smoothing: antialiased !important; }
+
+[class^="kick__icon-"]::before, [class*=" kick__icon-"]::before {
+  /* Better Font Rendering =========== */ }
+
+
+.kick__ticker-icon-color--yellow {
+  color: #FAD000; }
+
+.kick__ticker-icon-color--green {
+  color: #1FA300; }
+
+.kick__ticker-icon-color--red {
+  color: #cc0000; }
+
+.kick__ticker-icon-color--gray {
+  color: #595959; }
+
+.kick__ticker-icon-color--white {
+  color: #fff; }
+
+.kick__ticker-icon-color--black {
+  color: #000; }
+
+.kick__ticker-icon-color--blue {
+  color: #4d98c9; }
+
+.kick__ticker-icon {
+  font-size: 1.3rem; }
+
+.kick__ticker-icon-array {
+  position: relative;
+  display: inline-block; }
+  .kick__ticker-icon-array .kick__ticker-icon {
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .kick__ticker-icon-array .kick__ticker-icon:first-child {
+      position: relative; }
+  .kick__ticker-icon-array .kick__ticker-icon-color--yellow {
+    top: -0.075em;
+    left: 0.075em; }
+  .kick__ticker-icon-array .kick__ticker-icon-color--red {
+    top: 0.075em;
+    left: -0.075em; }
+  .kick__ticker-icon-array .kick__icon-Pfeil01 {
+    top: -0.15em;
+    font-size: 1.15rem; }
+  .kick__ticker-icon-array .kick__icon-Pfeil02 {
+    top: 0.35em;
+    font-size: 1.15rem; }
+
+
+.kick__data-grid__main img {
+  max-width: 100%; }
+
+
+.kick__badge {
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.2rem;
+  min-width: 1rem;
+  line-height: 0.9rem;
+  border-radius: 1rem;
+  text-align: center;
+  color: #cc0000;
+  background-color: #fff;
+  border: 1px solid transparent;
+  font-variant-numeric: tabular-nums; }
+  .kick__badge.kick__badge--small {
+    min-width: 0.9rem;
+    border-radius: 0.9rem; }
+  .kick__badge.kick__badge--big {
+    min-width: 1.3rem;
+    line-height: 1.45rem;
+    border-radius: 1.3rem; }
+  .kick__badge.kick__badge--red {
+    color: #fff;
+    background-color: #cc0000; }
+  .kick__badge.kick__badge--green {
+    background-color: #1FA300; }
+  .kick__badge.kick__badge--border {
+    border-color: #d4d4d5; }
+  .kick__badge span {
+    font-size: 0.85em; }
+
+.kick__badge-big {
+  background-image: url("../img/sechseck-primary.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  color: #fff;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  display: inline-block; }
+  .kick__badge-big--dark {
+    background-image: url("../img/sechseck.svg"); }
+  .kick__badge-big--secondary {
+    background-image: url("../img/sechseck-second.svg"); }
+  .kick__badge-big--outline-light {
+    background-image: url("../img/sechseck-outline-gray.svg");
+    color: #cc0000; }
+  .kick__badge-big span {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.2;
+    padding: 0.5rem 0;
+    width: 2.25rem;
+    text-align: center; }
+
+.kick__badge-xbig {
+  background-image: url("../img/sechseck-primary.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  color: #fff;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums; }
+  .kick__badge-xbig--dark {
+    background-image: url("../img/sechseck.svg"); }
+  .kick__badge-xbig--secondary {
+    background-image: url("../img/sechseck-second.svg"); }
+  .kick__badge-xbig--outline-light {
+    background-image: url("../img/sechseck-outline-gray.svg");
+    color: #cc0000; }
+  .kick__badge-xbig span {
+    display: block;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    padding: 1rem; }
+
+.kick__badge--note {
+  border: 1px solid #f3f3f3;
+  border-radius: 1rem;
+  padding: 0.1rem 0.2rem; }
+
+
 .kick__lineup-field-holder {
   max-width: 600px;
   margin: 0 auto;
