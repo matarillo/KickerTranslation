@@ -16,13 +16,13 @@ const getFormation = function (text) {
     if (doc.getElementsByTagName("parsererror").length) {
       return "Parse Error";
     }
+    translate(doc);
   } catch (e) {
     return (e.message);
   }
   const liveFormation = 'div.kick__data-grid__main';
   let target = doc.querySelector(liveFormation);
   if (target) {
-    translate(target);
     return target.outerHTML;
   }
   return liveFormation + " not found";
@@ -30,16 +30,17 @@ const getFormation = function (text) {
 
 /** @param {HTMLElement} target */
 const translate = function (target) {
-  const teamElements = target.querySelectorAll('div.taktischeaufstellung > div:not([class="taktAufSplItem"]) > div');
-  const memberElements = target.querySelectorAll('div.taktischeaufstellung > div[class="taktAufSplItem"] > a:last-child');
+  const teamElements = target.querySelectorAll('div.kick__v100-gameCell__team__name');
+  const memberElements = target.querySelectorAll('div.kick__lineup-field__field-half > a.kick__lineup-player-card > div.kick__lineup-player-card__name-holder > span.kick__lineup-player-card__name');
   /** @type {{de:string,ja:string}[]} */
   let members = [];
   for (let i = 0; i < teamElements.length; i++) {
     const teamElement = teamElements[i];
+    const teamTextContent = teamElement.textContent;
     for (let j = 0; j < data.dictionary.length; j++) {
       const team = data.dictionary[j];
-      if (teamElement.textContent === team.de) {
-        teamElement.textContent = team.ja;
+      if (teamTextContent.includes(team.de)) {
+        teamElement.textContent = teamTextContent.replace(team.de, team.ja);
         members = members.concat(team.members);
         break;
       }
@@ -50,8 +51,8 @@ const translate = function (target) {
     const memberTextContent = memberElement.textContent;
     for (let j = 0; j < members.length; j++) {
       const member = members[j];
-      if (memberTextContent.indexOf(member.de) == 0) {
-        memberElement.textContent = member.ja + memberTextContent.substr(member.de.length);
+      if (memberTextContent.includes(member.de)) {
+        memberElement.textContent = memberTextContent.replace(member.de, member.ja);
         break;
       }
     }
@@ -67,12 +68,10 @@ const readText = function (file, callback) {
 };
 
 const setScaling = function(scaling) {
-  //getComputedStyle(document.documentElement).setProperty('--formation-scaling', scaling);
   document.documentElement.style.setProperty('--formation-scaling', scaling);
 };
 
 const setFontScaling = function(scaling) {
-  //getComputedStyle(document.documentElement).setProperty('--formation-font-scaling', scaling);
   document.documentElement.style.setProperty('--formation-font-scaling', scaling);
 };
 

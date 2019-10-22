@@ -1,0 +1,57 @@
+[
+    {
+        "de": "Bayern München",
+        "ja": "バイエルン・ミュンヘン",
+        "members": [
+            { "de": "Alaba", "ja": "アラバ" },
+            { "de": "Arp", "ja": "アルプ" },
+            { "de": "Coman", "ja": "コマン" },
+            { "de": "Coutinho", "ja": "コウチーニョ" },
+            { "de": "Davies", "ja": "デイヴィス" },
+            { "de": "Gnabry", "ja": "ニャブリ" },
+            { "de": "Goretzka", "ja": "ゴレツカ" },
+            { "de": "Hernandez", "ja": "エルナンデス" },
+            { "de": "J. Boateng", "ja": "J. ボアテング" },
+            { "de": "Javi Martinez", "ja": "ハビ・マルティネス" },
+            { "de": "Kimmich", "ja": "キミッヒ" },
+            { "de": "Lewandowski", "ja": "レヴァンドフスキ" },
+            { "de": "Neuer", "ja": "ノイアー" },
+            { "de": "Pavard", "ja": "パヴァール" },
+            { "de": "Perisic", "ja": "ペリシッチ" },
+            { "de": "Süle", "ja": "ズーレ" },
+            { "de": "T. Müller", "ja": "T. ミュラー" },
+            { "de": "Thiago", "ja": "チアゴ" },
+            { "de": "Tolisso", "ja": "トリッソ" },
+            { "de": "Ulreich", "ja": "ウルライヒ" }
+        ]
+    },
+    {
+        "de": "FC Augsburg",
+        "ja": "FC アウクスブルク",
+        "members": [
+            { "de": "Cordova", "ja": "コルドバ" },
+            { "de": "F. Jensen", "ja": "F. イェンセン" },
+            { "de": "Finnbogason", "ja": "フィンボガソン" },
+            { "de": "Framberger", "ja": "フラムベルガー" },
+            { "de": "Götze", "ja": "ゲッツェ" },
+            { "de": "Gouweleeuw", "ja": "ハウウェレーウ" },
+            { "de": "Gruezo", "ja": "グルエソ" },
+            { "de": "Hahn", "ja": "ハーン" },
+            { "de": "Iago", "ja": "イアゴ" },
+            { "de": "Jedvaj", "ja": "イェドヴァイ" },
+            { "de": "Khedira", "ja": "ケディラ" },
+            { "de": "Koubek", "ja": "コウベク" },
+            { "de": "Lichtsteiner", "ja": "リヒトシュタイナー" },
+            { "de": "Luthe", "ja": "ルーテ" },
+            { "de": "M. Richter", "ja": "M. リヒター" },
+            { "de": "Max", "ja": "マックス" },
+            { "de": "Moravek", "ja": "モラーヴェク" },
+            { "de": "Niederlechner", "ja": "ニーダーレヒナー" },
+            { "de": "Oxford", "ja": "オックスフォード" },
+            { "de": "Schieber", "ja": "シーバー" },
+            { "de": "Suchy", "ja": "スヒー" },
+            { "de": "Uduokhai", "ja": "ウドゥオカイ" },
+            { "de": "Vargas", "ja": "バルガス" }
+        ]
+    }
+]
