@@ -1,14 +1,16 @@
 {
-  "name": "electron-sample",
-  "version": "0.1.0",
-  "description": "",
+  "name": "kicker-translation",
+  "version": "2.0.0",
+  "description": "tactical formations from kicker.de",
+  "author": "Kentaro Inomata",
+  "license": "ISC",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "electron-packager": "electron-packager . KickerTranslation --platform=darwin,win32 --arch=x64 --electronVersion=6.0.12 --out=dist"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "electron": "^6.0.12"
+    "electron": "^6.0.12",
+    "electron-packager": "^14.0.6"
   }
 }
