@@ -20,7 +20,7 @@ const getFormation = function (text) {
   } catch (e) {
     return (e.message);
   }
-  const liveFormation = 'div.kick__data-grid__main';
+  const liveFormation = 'div.kick__data-grid';
   let target = doc.querySelector(liveFormation);
   if (target) {
     return target.outerHTML;
@@ -31,7 +31,7 @@ const getFormation = function (text) {
 /** @param {HTMLElement} target */
 const translate = function (target) {
   const teamElements = target.querySelectorAll('div.kick__v100-gameCell__team__name');
-  const memberElements = target.querySelectorAll('div.kick__lineup-field__field-half > a.kick__lineup-player-card > div.kick__lineup-player-card__name-holder > span.kick__lineup-player-card__name');
+  const memberElements = target.querySelectorAll('div.kick__lineup-field__field-half > a.kick__lineup-player-card > div.kick__lineup-player-card__name-holder > span.kick__lineup-player-card__name, div.kick__lineup-text a');
   /** @type {{de:string,ja:string}[]} */
   let members = [];
   for (let i = 0; i < teamElements.length; i++) {

@@ -1,3 +1,4 @@
+/* L229 */
 @font-face {
   font-family: 'Kicker-IC';
   src: url("../fonts/kick-fo.eot?38946");
@@ -5,6 +6,44 @@
   font-weight: normal;
   font-style: normal; }
 
+/* L242 */
+@font-face {
+  font-family: 'Ringside Narrow';
+  src: url("../fonts/RingsideNarrow/RingsideNarrow-Medium_Web.woff2") format("woff2"), url("../fonts/RingsideNarrow/RingsideNarrow-Medium_Web.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ringside Narrow';
+  src: url("../fonts/RingsideNarrow/RingsideNarrow-Semibold_Web.woff2") format("woff2"), url("../fonts/RingsideNarrow/RingsideNarrow-Semibold_Web.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+
+/* L278 */
+@font-face {
+  font-family: 'Knockout 29';
+  src: url("../fonts/Knockout/Knockout-29_Web.woff2") format("woff2"), url("../fonts/Knockout/Knockout-29_Web.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+/* L321 */
+[class^="kick__icon-"], [class*=" kick__icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Kicker-IC' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  -moz-font-smoothing: antialiased !important;
+  -o-font-smoothing: antialiased !important; }
+
+[class^="kick__icon-"]::before, [class*=" kick__icon-"]::before {
+  /* Better Font Rendering =========== */ }
 
 /* +++++++++++++++ NICHT ENTFERNEN!!!!! FUER NAVIGATION EXTRA +++++++++++++++++ */
 .kick__icon-Navigation_U21:before {
@@ -1349,7 +1388,7 @@
 .kick__icon-zdf:before {
   content: "\e99e"; }
 
-
+/* L1698 */
 /* -------------------------------------------------- */
 /*    Box Sizing
 /* -------------------------------------------------- */
@@ -1358,26 +1397,52 @@ body {
   body *, body *:before, body *:after {
     box-sizing: inherit; }
 
+/* L1772 */
+/* Links
+     ========================================================================== */
+/**
+   * 1. Remove the gray background on active links in IE 10.
+   * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+   */
+   a {
+    color: inherit;
+    -webkit-text-decoration-skip: objects;
+    /* 2 */
+    text-decoration: none; }
+  
+  /**
+     * Remove the outline on focused links when they are also active or hovered
+     * in all browsers (opinionated).
+     */
+  a:active,
+  a:hover {
+    outline-width: 0; }
+  
+  /*a {
+      color: $c-gray-9;
+      font-weight: bold;
+      -webkit-transition: all 0.7s ease;
+      transition: all 0.7s ease;
+      border-bottom: 0;
+      &:hover, &:active {
+        color: $c-primary;
+        border-bottom: 1px solid $c-primary;
+      }
+    }*/
+  /* Text-level semantics
+       ========================================================================== */
 
-[class^="kick__icon-"], [class*=" kick__icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'Kicker-IC' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased !important;
-  -moz-osx-font-smoothing: grayscale !important;
-  -moz-font-smoothing: antialiased !important;
-  -o-font-smoothing: antialiased !important; }
+/* L2080 */
+h1, h2, h3, h4, h5, h6,
+blockquote, p, pre,
+dl, dd, ol, ul,
+figure,
+hr,
+fieldset, legend {
+  margin: 0;
+  padding: 0; }
 
-[class^="kick__icon-"]::before, [class*=" kick__icon-"]::before {
-  /* Better Font Rendering =========== */ }
-
-
+/* L2255 */
 .kick__ticker-icon-color--yellow {
   color: #FAD000; }
 
@@ -1424,11 +1489,7 @@ body {
     top: 0.35em;
     font-size: 1.15rem; }
 
-
-.kick__data-grid__main img {
-  max-width: 100%; }
-
-
+/* L5203 */
 .kick__badge {
   font-weight: 600;
   display: inline-block;
@@ -1508,7 +1569,582 @@ body {
   border-radius: 1rem;
   padding: 0.1rem 0.2rem; }
 
+/* L6224 */
+.kick__site-margin {
+  margin: 1rem 2rem; }
+  .kick__site-margin.kick__site-margin--border-left {
+    margin-left: 0;
+    padding-left: 2rem;
+    border-left: 1px solid #dedfe0; }
+  .kick__site-margin.kick__site-margin--border-right {
+    margin-right: 0;
+    padding-right: 2rem;
+    border-right: 1px solid #dedfe0; }
+  .kick__site-margin.kick__site-margin--border-bottom {
+    margin-bottom: 1rem;
+    padding-bottom: 0;
+    border-bottom: 1px solid #dedfe0; }
+  @media (max-width: 899px) {
+    .kick__site-margin {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem; }
+      .kick__site-margin.kick__site-margin--border-left {
+        padding-left: 0.5rem;
+        margin-right: 0.5rem; }
+      .kick__site-margin.kick__site-margin--border-right {
+        padding-right: 0.5rem;
+        margin-left: 0.5rem; } }
+  @media (max-width: 767px) {
+    .kick__site-margin.kick__site-margin--border-left {
+      margin-left: 0.5rem;
+      padding-left: 0;
+      border-left: 0; }
+    .kick__site-margin.kick__site-margin--border-right {
+      margin-right: 0.5rem;
+      padding-right: 0;
+      border-right: 0; } }
 
+.kick__site-margin--l {
+  margin: 1rem 2rem; }
+  .kick__site-margin--l.kick__site-margin--border-left {
+    margin-left: 0;
+    padding-left: 2rem;
+    border-left: 1px solid #dedfe0; }
+  @media (max-width: 1049px) {
+    .kick__site-margin--l.kick__site-margin--border-left {
+      padding-left: 0.5rem;
+      margin-right: 0.5rem; } }
+  @media (max-width: 1023px) {
+    .kick__site-margin--l {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem; }
+      .kick__site-margin--l.kick__site-margin--border-left {
+        margin-left: 0.5rem;
+        padding-left: 0;
+        border-left: 0; } }
+  .kick__site-margin--l.kick__site-margin--border-right {
+    margin-right: 0;
+    padding-right: 2rem;
+    border-right: 1px solid #dedfe0; }
+  @media (max-width: 1049px) {
+    .kick__site-margin--l.kick__site-margin--border-right {
+      padding-right: 0.5rem;
+      margin-left: 0.5rem; } }
+  @media (max-width: 1023px) {
+    .kick__site-margin--l {
+      margin-right: 0.5rem;
+      margin-left: 0.5rem; }
+      .kick__site-margin--l.kick__site-margin--border-right {
+        margin-right: 0.5rem;
+        padding-right: 0;
+        border-right: 0; } }
+
+.kick__site-margin--s {
+  margin: 1rem 2rem; }
+  .kick__site-margin--s.kick__site-margin--border-left {
+    margin-left: 0;
+    padding-left: 2rem;
+    border-left: 1px solid #dedfe0; }
+  .kick__site-margin--s.kick__site-margin--border-right {
+    margin-right: 0;
+    padding-right: 2rem;
+    border-right: 1px solid #dedfe0; }
+  @media (max-width: 767px) {
+    .kick__site-margin--s {
+      margin-right: 0.5rem;
+      margin-left: 0.5rem; }
+      .kick__site-margin--s.kick__site-margin--border-right {
+        margin-right: 0.5rem;
+        padding-right: 0;
+        border-right: 0; }
+      .kick__site-margin--s.kick__site-margin--border-left {
+        margin-left: 0.5rem;
+        padding-left: 0;
+        border-left: 0; } }
+
+.kick__site-padding.kick__site-padding--border-left {
+  margin-left: 0;
+  padding-left: 2rem;
+  border-left: 1px solid #dedfe0; }
+
+.kick__site-padding.kick__site-padding--border-right {
+  margin-right: 0;
+  padding-right: 2rem;
+  border-right: 1px solid #dedfe0; }
+
+.kick__card--with-logo {
+  position: relative;
+  margin-bottom: 3rem; }
+  .kick__card--with-logo .kick__card__team-logo {
+    position: absolute;
+    left: -26px;
+    top: -0.5rem;
+    max-width: 50px;
+    max-height: 50px; }
+    @media (max-width: 1023px) {
+      .kick__card--with-logo .kick__card__team-logo {
+        left: auto;
+        right: 5px; } }
+
+/* L6444 */
+.kick__data-grid--max-width {
+  background: #fff;
+  padding: 5px calc((100% - 1000px)/2); }
+
+.kick__data-grid--border-left {
+  border-left: 1px solid #dedfe0; }
+
+.kick__data-grid--border-right {
+  border-right: 1px solid #dedfe0; }
+  @media (max-width: 767px) {
+    .kick__data-grid--border-right {
+      border-right: 0; } }
+
+.kick__data-grid {
+  display: flex; }
+  .kick__data-grid .kick__data-grid__main {
+    width: 66.6665%; }
+  .kick__data-grid .kick__data-grid__side {
+    width: 33.3335%;
+    min-width: 300px; }
+    @media (min-width: 769px) {
+      .kick__data-grid .kick__data-grid__side {
+        border-left: 1px solid #dedfe0; }
+        .kick__data-grid .kick__data-grid__side .kick__site-margin--border-left {
+          border: 0; } }
+
+@media (min-width: 481px) and (max-width: 1023px) {
+  .kick__data-grid .kick__data-grid__side {
+    position: relative; }
+    .kick__data-grid .kick__data-grid__side:before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 1.25rem;
+      left: -1.3rem;
+      /* autoprefixer: off */
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+99 */
+      background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 99%, white 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 99%, white 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 99%, white 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+      /* IE6-9 */ } }
+  .kick__data-grid .kick__data-grid__item--border-right {
+    border-right: 1px solid #f3f3f3; }
+  @media (max-width: 768px) {
+    .kick__data-grid {
+      flex-flow: row wrap; }
+      .kick__data-grid .kick__data-grid__main,
+      .kick__data-grid .kick__data-grid__side {
+        width: 100%;
+        min-width: auto; }
+      .kick__data-grid .kick__data-grid__main:after {
+        content: "";
+        display: block;
+        border-top: 1px solid #dedfe0;
+        padding: .5rem;
+        margin: 0 .5rem; } }
+  @media (max-width: 1023px) {
+    .kick__data-grid.kick__data-grid--s {
+      flex-flow: row wrap; }
+      .kick__data-grid.kick__data-grid--s .kick__data-grid__main,
+      .kick__data-grid.kick__data-grid--s .kick__data-grid__side {
+        width: 100%;
+        min-width: auto; } }
+  .kick__data-grid img {
+    max-width: 100%; }
+  .kick__data-grid .kick__input-gamecell__change-score-btn__img,
+  .kick__data-grid .kick__input-gamecell__change-score-btn__img--active {
+    max-width: none; }
+
+@media (max-width: 767px) and (min-width: 481px) {
+  .kick__data-grid-tablet {
+    display: flex;
+    flex-flow: row wrap; }
+    .kick__data-grid-tablet .kick__data-grid-tablet__main {
+      width: 50%;
+      min-width: auto; }
+    .kick__data-grid-tablet .kick__data-grid-tablet--gutter-left {
+      margin-left: 0.5rem; }
+    .kick__data-grid-tablet .kick__data-grid-tablet--gutter-right {
+      margin-right: 0.5rem; } }
+
+.kick__data-grid--half-r {
+  flex-flow: wrap; }
+  .kick__data-grid--half-r .kick__data-grid__main,
+  .kick__data-grid--half-r .kick__data-grid__side {
+    width: 50%; }
+  @media (max-width: 1023px) {
+    .kick__data-grid--half-r .kick__data-grid__side,
+    .kick__data-grid--half-r .kick__data-grid__main {
+      width: 100%; } }
+  .kick__data-grid--half-r.kick__data-grid--half-padding-left .kick__data-grid__side {
+    padding-left: 2rem; }
+  @media (max-width: 1023px) {
+    .kick__data-grid--half-r.kick__data-grid--half-padding-left .kick__data-grid__side {
+      padding-left: 0; } }
+
+.kick__data-grid--half-r-s {
+  flex-flow: wrap; }
+  .kick__data-grid--half-r-s .kick__data-grid__main,
+  .kick__data-grid--half-r-s .kick__data-grid__side {
+    width: 50%; }
+  @media (max-width: 767px) {
+    .kick__data-grid--half-r-s .kick__data-grid__side,
+    .kick__data-grid--half-r-s .kick__data-grid__main {
+      width: 100%; } }
+  .kick__data-grid--half-r-s.kick__data-grid--half-padding-left .kick__data-grid__side {
+    padding-left: 2rem; }
+  @media (max-width: 767px) {
+    .kick__data-grid--half-r-s.kick__data-grid--half-padding-left .kick__data-grid__side {
+      padding-left: 0; } }
+
+.kick__data-grid--half .kick__data-grid__main,
+.kick__data-grid--half .kick__data-grid__side {
+  width: 50%; }
+
+@media (max-width: 767px) {
+  .kick__data-grid--half .kick__data-grid__side,
+  .kick__data-grid--half .kick__data-grid__main {
+    width: 100%; } }
+
+.kick__data-grid__padding--s:first-of-type {
+  padding-right: 0.25rem; }
+
+.kick__data-grid__padding--s:last-of-type {
+  padding-left: 0.25rem; }
+
+@media (max-width: 1023px) {
+  .kick__data-grid__padding--s:first-of-type, .kick__data-grid__padding--s:last-of-type {
+    padding: 0.25rem 0; } }
+
+.kick__data-grid--lineup {
+  flex-flow: row wrap; }
+  .kick__data-grid--lineup .kick__data-grid__main:nth-child(2) {
+    order: 3; }
+  .kick__data-grid--lineup .kick__data-grid__main:nth-child(4) {
+    order: 4; }
+  @media (max-width: 767px) {
+    .kick__data-grid--lineup .kick__data-grid__main:nth-child(2), .kick__data-grid--lineup .kick__data-grid__main:nth-child(4) {
+      order: initial; } }
+
+@media (max-width: 767px) {
+  .kick__data-grid--loose-r {
+    flex-flow: row wrap; }
+    .kick__data-grid--loose-r .kick__data-grid__main,
+    .kick__data-grid--loose-r .kick__data-grid__side {
+      width: 100%;
+      min-width: auto; } }
+
+.kick__grid-full-height {
+  height: 100%; }
+
+.kick__grid-bottom-align {
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+  .kick__grid-bottom-align > div:first-child {
+    flex-grow: 2; }
+
+.kick__data-grid--auto .kick__data-grid__main,
+.kick__data-grid--auto .kick__data-grid__side {
+  min-width: auto; }
+
+.kick__kick__data-grid__side .kick__kick__module-margin + .kick__kick__module-margin {
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid #dedfe0; }
+
+/* L6704 */
+.kick__card-headline {
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  font-family: "Knockout 29", sans-serif;
+  font-weight: normal;
+  letter-spacing: .025em; }
+  .kick__card-headline.kick__module-margin--top {
+    padding-top: 0.5rem; }
+  .kick__card-headline.kick__card-headline--no-padding {
+    padding: 0; }
+  .kick__card-headline.kick__card-headline--with-icon {
+    display: flex;
+    align-items: center; }
+    .kick__card-headline.kick__card-headline--with-icon .kick__card-headline--headline {
+      color: #222;
+      display: flex;
+      font-size: 1.1rem;
+      line-height: 1.2;
+      margin-right: 1rem; }
+    .kick__card-headline.kick__card-headline--with-icon .kick__card-headline--icon {
+      color: #cc0000;
+      margin-right: 1rem;
+      width: auto;
+      display: flex;
+      font-size: 1.1rem;
+      line-height: 1.2; }
+      .kick__card-headline.kick__card-headline--with-icon .kick__card-headline--icon img {
+        height: 1.1rem;
+        width: auto; }
+  .kick__card-headline.kick__card-headline--white {
+    color: #fff; }
+
+/* L6773 */
+h1.kick__card-sub-headline,
+h2.kick__card-sub-headline,
+h3.kick__card-sub-headline,
+h4.kick__card-sub-headline,
+h5.kick__card-sub-headline,
+h6.kick__card-sub-headline {
+  padding-bottom: 0.5rem; }
+
+.kick__card-sub-headline {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-family: "Ringside Narrow", sans-serif;
+  font-weight: 600;
+  color: #595959; }
+
+/* L7484 */
+.kick__clip-round {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px; }
+
+/* L7594 */
+.kick__data-list {
+  font-family: "Ringside Narrow", sans-serif;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto; }
+  .kick__data-list .kick__data-list__row {
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    margin-bottom: 0.25rem;
+    justify-content: space-between; }
+    .kick__data-list .kick__data-list__row.kick__data-list__row--image {
+      align-items: flex-start; }
+  .kick__data-list .kick__data-list__title {
+    width: 38%;
+    order: 2;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #363535; }
+    .kick__data-list .kick__data-list__title .kick__data-list__img-title {
+      margin-right: 1rem; }
+    .kick__data-list .kick__data-list__title img {
+      max-width: 100%; }
+  .kick__data-list .kick__data-list__value {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    width: 58%; }
+    .kick__data-list .kick__data-list__value a {
+      text-decoration: underline; }
+      .kick__data-list .kick__data-list__value a:hover {
+        color: #4d98c9;
+        text-decoration: none; }
+  .kick__data-list.kick__data-list--big .kick__data-list__title {
+    font-size: 1rem;
+    line-height: 1.2; }
+  .kick__data-list.kick__data-list--big .kick__data-list__value {
+    font-size: 1rem;
+    line-height: 1.2; }
+
+/* L13687 */
+.kick__ticker-article__header h3 {
+  margin-bottom: 0;
+  font-family: "Ringside Narrow", sans-serif;
+  font-weight: 600;
+  color: #747577; }
+
+.kick__ticker {
+  margin-top: 1rem;
+  font-family: "Ringside Narrow", sans-serif; }
+  .kick__ticker .kick__ticker__row {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    flex-flow: row nowrap;
+    align-items: baseline; }
+  .kick__ticker .kick__goals__time__extra {
+    vertical-align: 5px;
+    font-size: 0.7rem; }
+  .kick__ticker .kick__ticker__cell-info {
+    width: 18%;
+    text-align: right;
+    padding-right: 1rem;
+    white-space: nowrap; }
+  .kick__ticker .kick__ticker__cell-text {
+    position: relative;
+    width: 82%; }
+    .kick__ticker .kick__ticker__cell-text .kick__ticker__cell-text-inner {
+      padding-right: 0.5rem; }
+  .kick__ticker .kick__ticker__strikethrough {
+    text-decoration: line-through; }
+  @media (max-width: 479px) {
+    .kick__ticker .kick__ticker__cell-text {
+      position: static; }
+    .kick__ticker .kick__ticker__row {
+      position: relative; } }
+  .kick__ticker .kick__ticker__cell-text--important {
+    font-size: 1.2rem;
+    line-height: 1.2; }
+  .kick__ticker .kick__ticker__cell-text--important,
+  .kick__ticker strong {
+    font-weight: 600; }
+  .kick__ticker .kick__ticker__cell-text__score-message {
+    color: #cc0000; }
+  .kick__ticker .kick__ticker__cell-text__score-message__secondary {
+    color: #595959; }
+  .kick__ticker .kick__clipped-img {
+    margin-bottom: 0.5rem; }
+  .kick__ticker .kick__ticker__event-icon {
+    display: inline-block;
+    width: 1.4em; }
+  .kick__ticker .kick__ticker__text-event-icon .kick__ticker-icon {
+    font-size: 1rem;
+    line-height: 1.2; }
+  .kick__ticker .kick__ticker__player {
+    width: 3.4em;
+    margin-right: 1.0em;
+    float: left;
+    position: relative; }
+    .kick__ticker .kick__ticker__player.kick__ticker__player--bigger {
+      width: 6em;
+      height: 6em;
+      z-index: 1;
+      position: relative;
+      margin-bottom: 1em; }
+    .kick__ticker .kick__ticker__player .kick__ticker__player__photo {
+      display: block;
+      max-width: 100%; }
+    .kick__ticker .kick__ticker__player .kick__ticker__player__team {
+      position: absolute;
+      right: -0.5rem;
+      bottom: 0;
+      width: 50%; }
+  .kick__ticker .kick__player-actions {
+    position: absolute;
+    top: -4px;
+    left: -4px; }
+  .kick__ticker .kick__ticker__row--highlight,
+  .kick__ticker .kick__ticker__row--goal {
+    background: #dff2fd;
+    padding: 0.5rem 0; }
+  .kick__ticker .kick__ticker__row--goal {
+    border-left: 4px solid #cc0000; }
+  .kick__ticker .kick__ticker__conclusion {
+    font-size: 1.2rem;
+    line-height: 1.2; }
+    @media (min-width: 481px) {
+      .kick__ticker .kick__ticker__conclusion {
+        padding-left: 18%; } }
+  .kick__ticker .kick__ticker__minute {
+    color: #595959;
+    font-variant-numeric: tabular-nums; }
+    .kick__ticker .kick__ticker__minute.kick__ticker__minute--highlight {
+      display: block;
+      color: #cc0000;
+      font-weight: 600; }
+  .kick__ticker .kick__ticker__time {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    color: #747577; }
+    .kick__ticker .kick__ticker__time .kick__ticker__uhr {
+      display: none; }
+  .kick__ticker.kick__ticker--small {
+    display: table;
+    width: 100%; }
+    .kick__ticker.kick__ticker--small .kick__ticker__row {
+      display: table-row; }
+    .kick__ticker.kick__ticker--small .kick__ticker__cell-info {
+      display: table-cell;
+      padding-bottom: 0.5rem;
+      padding-right: 0.5rem;
+      width: 1%; }
+      .kick__ticker.kick__ticker--small .kick__ticker__cell-info .kick__scoreboard {
+        margin-top: 0; }
+    .kick__ticker.kick__ticker--small .kick__ticker__cell-text {
+      width: 100%;
+      padding-bottom: 0.5rem; }
+    .kick__ticker.kick__ticker--small .kick__ticker__player {
+      margin-bottom: 0.5rem; }
+  .kick__ticker .kick__ticker__cell-info .kick__scoreboard {
+    color: #cc0000;
+    margin-top: 0.25rem;
+    text-align: inherit; }
+    .kick__ticker .kick__ticker__cell-info .kick__scoreboard .kick__scoreholder {
+      padding: 0 0.3em;
+      padding-top: 0.1rem;
+      display: inline-block; }
+    .kick__ticker .kick__ticker__cell-info .kick__scoreboard .kick__scoreholder__box--left,
+    .kick__ticker .kick__ticker__cell-info .kick__scoreboard .kick__scoreholder__box--right {
+      width: 42%; }
+    .kick__ticker .kick__ticker__cell-info .kick__scoreboard .kick__scoreholder__box--middle {
+      width: 16%; }
+  .kick__ticker .kick__ticker__game-row {
+    width: 100%;
+    padding: 0.25rem 0;
+    border-top: 1px solid #d4d4d5; }
+    .kick__ticker .kick__ticker__game-row:first-child {
+      border-top: none; }
+    .kick__ticker .kick__ticker__game-row .kick__gamecell {
+      margin: 0 auto;
+      max-width: 400px; }
+  .kick__ticker .kick__ad-border {
+    border: 1px solid #dedfe0;
+    /* padding-left: 0;
+    padding-right: 0; */
+    margin-left: 18%; }
+    .kick__ticker .kick__ad-border .kick__ad-border__title {
+      left: 1rem;
+      padding-left: 0; }
+
+.kick__ticker-refresh-button {
+  padding: 1rem 0;
+  padding-left: 0;
+  display: block;
+  padding-right: 2rem; }
+  @media (max-width: 767px) {
+    .kick__ticker-refresh-button {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem; } }
+
+.kick__ticker-hr {
+  background: none;
+  border: 0;
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #f3f3f3;
+  margin: 0em; }
+
+@media (min-width: 769px) {
+  .kick__ticker--wide .kick__ticker__cell-info {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse; }
+    .kick__ticker--wide .kick__ticker__cell-info .kick__ticker__time-info {
+      min-width: 42%; }
+    .kick__ticker--wide .kick__ticker__cell-info .kick__ticker__meta-info {
+      margin-top: -0.1rem; }
+      .kick__ticker--wide .kick__ticker__cell-info .kick__ticker__meta-info .kick__scoreboard {
+        margin-top: 0; }
+  .kick__ticker--wide .kick__ticker__cell-text .kick__ticker__cell-text-inner {
+    padding-right: 2rem; }
+  .kick__ticker-refresh-button,
+  .kick__ticker.kick__clipped-img {
+    margin-left: 18%; } }
+
+/* L14271 */
 .kick__lineup-field-holder {
   max-width: 600px;
   margin: 0 auto;
